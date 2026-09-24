@@ -1,0 +1,1524 @@
+<!DOCTYPE html><html><head><title></title><meta charset="utf-8"><style>pre code.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 1em
+}
+code.hljs {
+  padding: 3px 5px
+}
+/*!
+  Theme: GitHub
+  Description: Light theme as seen on github.com
+  Author: github.com
+  Maintainer: @Hirse
+  Updated: 2021-05-15
+
+  Outdated base version: https://github.com/primer/github-syntax-light
+  Current colors taken from GitHub's CSS
+*/
+.hljs {
+  color: #24292e;
+  background: #ffffff
+}
+.hljs-doctag,
+.hljs-keyword,
+.hljs-meta .hljs-keyword,
+.hljs-template-tag,
+.hljs-template-variable,
+.hljs-type,
+.hljs-variable.language_ {
+  /* prettylights-syntax-keyword */
+  color: #d73a49
+}
+.hljs-title,
+.hljs-title.class_,
+.hljs-title.class_.inherited__,
+.hljs-title.function_ {
+  /* prettylights-syntax-entity */
+  color: #6f42c1
+}
+.hljs-attr,
+.hljs-attribute,
+.hljs-literal,
+.hljs-meta,
+.hljs-number,
+.hljs-operator,
+.hljs-variable,
+.hljs-selector-attr,
+.hljs-selector-class,
+.hljs-selector-id {
+  /* prettylights-syntax-constant */
+  color: #005cc5
+}
+.hljs-regexp,
+.hljs-string,
+.hljs-meta .hljs-string {
+  /* prettylights-syntax-string */
+  color: #032f62
+}
+.hljs-built_in,
+.hljs-symbol {
+  /* prettylights-syntax-variable */
+  color: #e36209
+}
+.hljs-comment,
+.hljs-code,
+.hljs-formula {
+  /* prettylights-syntax-comment */
+  color: #6a737d
+}
+.hljs-name,
+.hljs-quote,
+.hljs-selector-tag,
+.hljs-selector-pseudo {
+  /* prettylights-syntax-entity-tag */
+  color: #22863a
+}
+.hljs-subst {
+  /* prettylights-syntax-storage-modifier-import */
+  color: #24292e
+}
+.hljs-section {
+  /* prettylights-syntax-markup-heading */
+  color: #005cc5;
+  font-weight: bold
+}
+.hljs-bullet {
+  /* prettylights-syntax-markup-list */
+  color: #735c0f
+}
+.hljs-emphasis {
+  /* prettylights-syntax-markup-italic */
+  color: #24292e;
+  font-style: italic
+}
+.hljs-strong {
+  /* prettylights-syntax-markup-bold */
+  color: #24292e;
+  font-weight: bold
+}
+.hljs-addition {
+  /* prettylights-syntax-markup-inserted */
+  color: #22863a;
+  background-color: #f0fff4
+}
+.hljs-deletion {
+  /* prettylights-syntax-markup-deleted */
+  color: #b31d28;
+  background-color: #ffeef0
+}
+.hljs-char.escape_,
+.hljs-link,
+.hljs-params,
+.hljs-property,
+.hljs-punctuation,
+.hljs-tag {
+  /* purposely ignored */
+  
+}/*# sourceURL=C:\Users\nguyentd\AppData\Local\npm-cache\_npx\55158e48eb5c59f7\node_modules\highlight.js\styles\github.css*/</style><style>
+    @page { size: A4; margin: 16mm 14mm 18mm 14mm; }
+
+    /* Link nội bộ do link-ids.js sinh: nhảy tới thì tô sáng hàng / đoạn đích */
+    html { scroll-behavior: smooth; }
+    a[id] { scroll-margin-top: 60px; }
+    a[href^="#"] { color: #0b62c4; text-decoration: none; border-bottom: 1px dotted #0b62c4; }
+    tr:has(a[id]:target) { background: #fff3b0 !important; transition: background .3s; }
+    h2:has(a[id]:target), h3:has(a[id]:target), p:has(a[id]:target) { background: #fff3b0; }
+
+    body {
+      font-family: 'Segoe UI', 'Times New Roman', Arial, sans-serif;
+      font-size: 10.5pt;
+      line-height: 1.55;
+      color: #1a1a1a;
+    }
+
+    h1 {
+      font-size: 17pt;
+      color: #0b4a8f;
+      border-bottom: 2px solid #0b4a8f;
+      padding-bottom: 4px;
+      margin-top: 22px;
+      page-break-before: always;
+    }
+    h1:first-of-type { page-break-before: avoid; }
+    h2 { font-size: 13.5pt; color: #12609e; margin-top: 18px; }
+    h3 { font-size: 11.5pt; color: #333; margin-top: 14px; }
+    h1, h2, h3, h4 { page-break-after: avoid; }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 10px 0;
+      font-size: 9pt;
+      table-layout: fixed;
+    }
+    th, td {
+      border: 1px solid #b8c4d0;
+      padding: 5px 7px;
+      vertical-align: top;
+      word-wrap: break-word;
+      overflow-wrap: anywhere;
+    }
+    th { background: #eaf1f8; font-weight: 600; text-align: left; }
+    tr { page-break-inside: avoid; }
+
+    code {
+      font-family: Consolas, 'Courier New', monospace;
+      font-size: 8.8pt;
+      background: #f3f4f6;
+      padding: 1px 4px;
+      border-radius: 3px;
+    }
+    pre { page-break-inside: avoid; }
+
+    blockquote {
+      border-left: 3px solid #0b4a8f;
+      margin: 10px 0;
+      padding: 4px 12px;
+      background: #f6f9fc;
+      color: #444;
+      font-size: 9.5pt;
+    }
+
+    /* Nhãn APP-nn: đánh dấu việc Mobile App phải làm (Quy tắc 25). Không có CSS
+       (preview IDE, Confluence) thì vẫn đọc được dạng chữ thường "APP-01". */
+    .app-tag {
+      display: inline-block;
+      background: #1e88e5;
+      color: #fff;
+      font-size: 8pt;
+      font-weight: 700;
+      padding: 1px 6px;
+      border-radius: 3px;
+      margin-right: 4px;
+      white-space: nowrap;
+    }
+
+    .mermaid {
+      page-break-inside: avoid;
+      text-align: center;
+      margin: 14px 0;
+    }
+
+    /* Sequence diagram dài thường cao hơn cả trang A4. Không chặn max-height thì
+       page-break-inside:avoid đẩy nguyên sơ đồ sang trang sau, để lại trang trắng. */
+    .mermaid svg {
+      width: auto;
+      height: auto;
+      max-width: 100%;
+      /* !important là bắt buộc: mermaid gắn style inline lên thẻ svg, không có
+         !important thì giới hạn này bị bỏ qua, sơ đồ cao quá khổ và đẩy cụm tiêu
+         đề sang một trang gần như trắng. */
+      max-height: 225mm !important;
+    }
+
+    /* 200mm để ảnh còn nằm vừa dưới cụm tiêu đề mục; cao hơn là bị đẩy sang
+       trang sau và bỏ lại một trang gần như trắng. */
+    img {
+      display: block;
+      max-width: 100%;
+      max-height: 200mm;
+      height: auto;
+      margin: 10px auto;
+      page-break-inside: avoid;
+    }
+
+    /* Mockup màn hình điện thoại: thu nhỏ để không chiếm trọn trang. */
+    img[alt^="MH"] { max-width: 62mm; }
+    td > img[alt^="MH"] { max-width: 56mm; margin: 4px auto; }
+
+    /* Bản HTML dùng để đọc trên trình duyệt: bỏ ngắt trang, giới hạn bề ngang
+       cho dễ đọc, phóng to ảnh hơn so với bản in. */
+    @media screen {
+      body {
+        max-width: 960px;
+        margin: 0 auto;
+        padding: 32px 24px 64px;
+      }
+      h1 { page-break-before: auto; }
+      img[alt^="MH"] { max-width: 260px; }
+      td > img[alt^="MH"] { max-width: 240px; }
+      img, .mermaid svg { max-height: none; }
+    }
+  </style><script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+
+for (const code of document.querySelectorAll('pre > code')) {
+  if (!/(^|\s)(language-)?mermaid(\s|$)/.test(code.className)) continue;
+  const div = document.createElement('div');
+  div.className = 'mermaid';
+  div.textContent = code.textContent;
+  code.parentElement.replaceWith(div);
+}
+
+mermaid.initialize({
+  startOnLoad: false,
+  theme: 'neutral',
+  fontFamily: 'Segoe UI, Arial, sans-serif',
+  sequence: { useMaxWidth: true },
+  flowchart: { useMaxWidth: true },
+});
+
+await mermaid.run({ querySelector: '.mermaid' });
+</script></head>
+	<body class="">
+		<h1 id="srs_app_cài-đặt-hạn-mức-giao-dịch-chờ">SRS_App_Cài đặt hạn mức giao dịch chờ</h1>
+<table>
+<thead>
+<tr>
+<th align="left">Dự án</th>
+<th align="left">Tính năng</th>
+<th align="left">Kênh</th>
+<th align="left">Phiên bản</th>
+<th align="left">Trạng thái tài liệu</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Vietbank Digi+</td>
+<td align="left">Cài đặt hạn mức giao dịch chờ (URD F-TGC-001)</td>
+<td align="left">App</td>
+<td align="left">V1.0.0</td>
+<td align="left">Chờ chốt</td>
+</tr>
+</tbody></table>
+<h2 id="lịch-sử-thay-đổi">Lịch sử thay đổi</h2>
+<p><em>A - Tạo mới; M - Sửa đổi; D - Xóa bỏ</em></p>
+<table>
+<thead>
+<tr>
+<th align="left">Ngày</th>
+<th align="left">Loại</th>
+<th align="left">Phiên bản</th>
+<th align="left">Mô tả thay đổi</th>
+<th align="left">Người thực hiện</th>
+<th align="left">Người xác nhận (Bank)</th>
+<th align="left">Nguồn yêu cầu</th>
+<th align="left">Phiên bản URD</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">24/09/2026</td>
+<td align="left">A</td>
+<td align="left">V1.0.0</td>
+<td align="left">Tạo mới từ URD (chưa có API doc, chưa có Figma)</td>
+<td align="left">nguyentd (Claude hỗ trợ)</td>
+<td align="left"></td>
+<td align="left">Bank</td>
+<td align="left">1.0.0</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="0-tổng-quan-cho-người-review"><a id="s-0"></a>0. Tổng quan cho người review</h2>
+<h3 id="01-sẵn-sàng-lên-plan"><a id="s-0-1"></a>0.1. Sẵn sàng lên PLAN?</h3>
+<table>
+<thead>
+<tr>
+<th align="left">Cổng</th>
+<th align="left">Điều kiện</th>
+<th align="center">Đạt</th>
+<th align="left">Còn vướng</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">G1</td>
+<td align="left">Danh sách màn hình và loại từng màn (Mới / Sửa / Dùng lại) đã chốt — <a href="#s-2-2">§2.2</a></td>
+<td align="center">❌</td>
+<td align="left"><a href="#q-01">Q-01</a> (<a href="#mh-03">MH-03</a> dùng khối nào), <a href="#q-02">Q-02</a> (<a href="#mh-04">MH-04</a> là popup hay màn)</td>
+</tr>
+<tr>
+<td align="left">G2</td>
+<td align="left">Điều hướng giữa các màn và điều kiện rẽ nhánh đã chốt — <a href="#s-2-2">§2.2</a>, <a href="#s-4">§4</a></td>
+<td align="center">❌</td>
+<td align="left"><a href="#q-02">Q-02</a>, <a href="#q-04">Q-04</a></td>
+</tr>
+<tr>
+<td align="left">G3</td>
+<td align="left">Mỗi bước ở <a href="#s-4">§4</a> chỉ có <strong>một</strong> tác nhân</td>
+<td align="center">✅</td>
+<td align="left">Hai việc chưa rõ bên làm để ở <a href="#cl-09">CL-09</a>, <a href="#cl-10">CL-10</a></td>
+</tr>
+<tr>
+<td align="left">G4</td>
+<td align="left">Biết API nào Client gọi, gọi ở bước nào — <a href="#s-5-1">§5.1</a></td>
+<td align="center">❌</td>
+<td align="left"><a href="#q-01">Q-01</a>, <a href="#q-03">Q-03</a></td>
+</tr>
+<tr>
+<td align="left">G5</td>
+<td align="left">Mọi chỗ "như hiện tại / tương tự luồng X" đã thành <code>REF-nn</code> có link — <a href="#s-0-2">§0.2-B</a></td>
+<td align="center">✅</td>
+<td align="left">-</td>
+</tr>
+<tr>
+<td align="left">G6</td>
+<td align="left">Mỗi tham số cấu hình biết Client lấy từ đâu — <a href="#s-6">§6</a></td>
+<td align="center">❌</td>
+<td align="left"><a href="#q-03">Q-03</a></td>
+</tr>
+<tr>
+<td align="left">G7</td>
+<td align="left">Mỗi nhóm lỗi biết Client xử lý tiếp thế nào — <a href="#s-4-1">§4.1</a></td>
+<td align="center">✅</td>
+<td align="left">-</td>
+</tr>
+<tr>
+<td align="left">G8</td>
+<td align="left">Không còn điểm cần chốt mức 🔴 — <a href="#s-7">§7</a></td>
+<td align="center">❌</td>
+<td align="left"><a href="#q-01">Q-01</a>, <a href="#q-02">Q-02</a>, <a href="#q-03">Q-03</a>, <a href="#q-04">Q-04</a></td>
+</tr>
+</tbody></table>
+<p><strong>Kết luận: Chờ chốt 4 điểm 🔴</strong> — cơ chế xác thực Facepay, kiểu thông báo thành công, nguồn dữ liệu của <a href="#mh-02">MH-02</a>, checkbox điều khoản.</p>
+<h3 id="02-phạm-vi-client"><a id="s-0-2"></a>0.2. Phạm vi Client</h3>
+<p><strong>A. Client làm mới / sửa</strong></p>
+<table>
+<thead>
+<tr>
+<th align="left">Mã</th>
+<th align="left">Việc Client phải làm</th>
+<th align="left">Loại</th>
+<th align="left">Đặc tả tại</th>
+<th align="left">Trạng thái</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><a id="cl-01"></a>CL-01</td>
+<td align="left">Thêm mục "Hạn mức giao dịch chờ" vào <a href="#mh-01">MH-01</a> Cài đặt tiện ích</td>
+<td align="left">Sửa MH</td>
+<td align="left"><a href="#mh-01-spec">§3 MH-01</a> · <a href="#b1">§4 B1</a></td>
+<td align="left">Chờ <a href="#q-05">Q-05</a></td>
+</tr>
+<tr>
+<td align="left"><a id="cl-02"></a>CL-02</td>
+<td align="left">Gọi <a href="#api-01">API-01</a> lấy cài đặt hiện tại + tham số, chọn biến thể <a href="#mh-02">MH-02</a></td>
+<td align="left">API · Logic</td>
+<td align="left"><a href="#b1">§4 B1</a> · <a href="#s-5">§5</a></td>
+<td align="left">Chờ <a href="#q-03">Q-03</a>, <a href="#q-06">Q-06</a></td>
+</tr>
+<tr>
+<td align="left"><a id="cl-03"></a>CL-03</td>
+<td align="left">Dựng <a href="#mh-02">MH-02</a> Cài đặt hạn mức giao dịch chờ (2 biến thể), gồm Back / Home</td>
+<td align="left">MH mới</td>
+<td align="left"><a href="#mh-02-spec">§3 MH-02</a></td>
+<td align="left">Chờ <a href="#q-04">Q-04</a>, <a href="#q-07">Q-07</a>, <a href="#q-08">Q-08</a>, <a href="#q-10">Q-10</a>, <a href="#q-12">Q-12</a></td>
+</tr>
+<tr>
+<td align="left"><a id="cl-04"></a>CL-04</td>
+<td align="left">Validate <a href="#br-01">BR-01</a>, <a href="#br-02">BR-02</a>, <a href="#br-03">BR-03</a> và hiển thị <a href="#msg-01">MSG-01</a> … <a href="#msg-04">MSG-04</a></td>
+<td align="left">Logic</td>
+<td align="left"><a href="#b3">§4 B3</a> · <a href="#s-4-1">§4.1</a></td>
+<td align="left">Chờ <a href="#q-03">Q-03</a>, <a href="#q-09">Q-09</a></td>
+</tr>
+<tr>
+<td align="left"><a id="cl-05"></a>CL-05</td>
+<td align="left">Mở "Điều khoản điều kiện" khi bấm link</td>
+<td align="left">Điều hướng</td>
+<td align="left"><a href="#mh-02-spec">§3 MH-02</a> dòng 12</td>
+<td align="left">Chờ <a href="#q-11">Q-11</a></td>
+</tr>
+<tr>
+<td align="left"><a id="cl-06"></a>CL-06</td>
+<td align="left">Xác thực Facepay theo <a href="#ref-01">REF-01</a>, <strong>khác <a href="#ref-01">REF-01</a></strong>: chỉ Facepay, không OTP, không có MH xác nhận</td>
+<td align="left">Logic · Quyền OS</td>
+<td align="left"><a href="#b4">§4 B4</a></td>
+<td align="left">Chờ <a href="#q-01">Q-01</a>, <a href="#q-12">Q-12</a></td>
+</tr>
+<tr>
+<td align="left"><a id="cl-07"></a>CL-07</td>
+<td align="left">Gọi <a href="#api-02">API-02</a> ghi nhận cài đặt, xử lý kết quả</td>
+<td align="left">API</td>
+<td align="left"><a href="#b5">§4 B5</a>, B7 · <a href="#s-5">§5</a></td>
+<td align="left">Chờ <a href="#q-01">Q-01</a>, <a href="#q-06">Q-06</a></td>
+</tr>
+<tr>
+<td align="left"><a id="cl-08"></a>CL-08</td>
+<td align="left">Hiển thị thông báo thành công (<a href="#mh-04">MH-04</a>) và điều hướng sau đó</td>
+<td align="left">MH mới · Điều hướng</td>
+<td align="left"><a href="#mh-04-spec">§3 MH-04</a> · <a href="#b7">§4 B7</a></td>
+<td align="left">Chờ <a href="#q-02">Q-02</a></td>
+</tr>
+<tr>
+<td align="left"><a id="cl-09"></a>CL-09</td>
+<td align="left">Chỉ cho KH cá nhân sử dụng tính năng (URD §1.1 Điều kiện trước)</td>
+<td align="left">?</td>
+<td align="left">-</td>
+<td align="left">Chưa rõ bên làm (<a href="#q-13">Q-13</a>)</td>
+</tr>
+<tr>
+<td align="left"><a id="cl-10"></a>CL-10</td>
+<td align="left">"Kiểm tra trạng thái PTXT" (dòng lẻ cuối URD §1.4)</td>
+<td align="left">?</td>
+<td align="left">-</td>
+<td align="left">Chưa rõ bên làm (<a href="#q-14">Q-14</a>)</td>
+</tr>
+</tbody></table>
+<p><strong>B. Dùng lại, không viết lại</strong></p>
+<table>
+<thead>
+<tr>
+<th align="left">Mã</th>
+<th align="left">Thành phần dùng lại</th>
+<th align="left">URD ghi (nguyên văn · vị trí)</th>
+<th align="left">Tài liệu gốc</th>
+<th align="left">Khác biệt riêng ở tính năng này</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><a id="ref-01"></a>REF-01</td>
+<td align="left">Xác thực Facepay (khối RC-01)</td>
+<td align="left">"Theo thông báo chuẩn của PTXT Facepay hiện có" · URD §1.4 E-TGC-003<br>"Tương tự xử lý luồng Facepay hiện tại" · URD §1.4 E-TGC-003<br>"theo số lần cho phép của PTXT Facepay" · URD EX-03</td>
+<td align="left"><a href="../../../shared/xac-thuc-giao-dich/SRS_RC01_XacThucGiaoDich.md">SRS_RC01_XacThucGiaoDich</a> <a href="#s-0-1">§0.1</a>, §5.7 — đã đọc<br>Code: <code>BaseAuthMethodViewModel.requireFacePay()</code> (Facepay là PTXT phụ trong giao dịch), <code>ScreenSDKFacePay</code> (FaceSDK gọi đứng riêng, <code>FaceSDKFlow</code>) — đã đọc</td>
+<td align="left">RC-01 luôn ghép Facepay với Soft OTP / SMS OTP, PTXT do OMNI Server map theo loại GD 2345; URD BR_05 chỉ yêu cầu Facepay<br>Không có MH xác nhận (URD §1.3.1)<br>→ <a href="#cl-06">CL-06</a>, <a href="#q-01">Q-01</a></td>
+</tr>
+<tr>
+<td align="left"><a id="ref-02"></a>REF-02</td>
+<td align="left">Menu Cài đặt tiện ích</td>
+<td align="left">Ảnh MH1 · URD §1.2.1</td>
+<td align="left">Code <code>AccountSettingsActivity</code> → <code>VBFunctions.navigateByServiceCode()</code>: mục menu hiển thị theo mã dịch vụ OMNI Server trả — đã đọc</td>
+<td align="left">Thêm một mục mới → <a href="#cl-01">CL-01</a>, <a href="#q-05">Q-05</a></td>
+</tr>
+<tr>
+<td align="left"><a id="ref-03"></a>REF-03</td>
+<td align="left">Xử lý lỗi chung</td>
+<td align="left">- (URD không nhắc)</td>
+<td align="left"><code>.claude/project-profile/srs-profile.md</code> <a href="#s-6">§6</a> — đã đọc</td>
+<td align="left">Không</td>
+</tr>
+</tbody></table>
+<p><strong>C. Ngoài phạm vi Client</strong></p>
+<table>
+<thead>
+<tr>
+<th align="left">Việc</th>
+<th align="left">Bên làm</th>
+<th align="left">Client phụ thuộc gì</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Ghi nhận cài đặt vào hợp đồng Mobile Banking trên trang quản trị Vietbank Digital Plus; ghi đè cài đặt cũ (<a href="#br-06">BR-06</a>)</td>
+<td align="left">OMNI Server</td>
+<td align="left">Kết quả <a href="#api-02">API-02</a></td>
+</tr>
+<tr>
+<td align="left">Giữ nguyên cài đặt cũ khi xác thực Facepay thất bại (<a href="#br-06">BR-06</a>)</td>
+<td align="left">OMNI Server</td>
+<td align="left">Không</td>
+</tr>
+<tr>
+<td align="left">Áp hạn mức / thời gian chờ mặc định khi KH chưa cài đặt (<a href="#br-04">BR-04</a>)</td>
+<td align="left">OMNI Server</td>
+<td align="left">Không</td>
+</tr>
+<tr>
+<td align="left">Giữ giao dịch chuyển tiền vượt hạn mức trong thời gian chờ</td>
+<td align="left">OMNI Server (URD "Check điều kiện và thực thi giao dịch chờ", pageId 1034325369)</td>
+<td align="left">Không — ngoài tính năng này</td>
+</tr>
+<tr>
+<td align="left">Cấu hình hạn mức gói, tham số <a href="#cfg-01">CFG-01</a> … <a href="#cfg-06">CFG-06</a></td>
+<td align="left">BO</td>
+<td align="left">Giá trị trả qua <a href="#api-01">API-01</a> (<a href="#q-03">Q-03</a>)</td>
+</tr>
+</tbody></table>
+<h3 id="03-tóm-tắt-điểm-cần-chốt"><a id="s-0-3"></a>0.3. Tóm tắt điểm cần chốt</h3>
+<p>18 điểm: 🔴 4 chặn PLAN · 🟠 10 chặn task · 🟡 4 chặn nghiệm thu. Theo người chốt: BA 12 · OMNI Server 2 · BA + OMNI Server 4. Chi tiết ở §7.</p>
+<hr>
+<h2 id="1-use-case"><a id="s-1"></a>1. Use Case</h2>
+<table>
+<thead>
+<tr>
+<th align="left">Hạng mục</th>
+<th align="left">Nội dung</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Use Case Name</td>
+<td align="left">Cài đặt hạn mức giao dịch chờ</td>
+</tr>
+<tr>
+<td align="left">Use Case ID</td>
+<td align="left">UC-PendingTransactionLimit</td>
+</tr>
+<tr>
+<td align="left">Mô tả</td>
+<td align="left">Là KH cá nhân, tôi muốn tự cài đặt hạn mức và thời gian chờ cho giao dịch chuyển tiền, theo Công văn 6190/NHNN-TT (URD §1.1)</td>
+</tr>
+<tr>
+<td align="left">Actor</td>
+<td align="left">KH, App Vietbank Digi+, OMNI Server, Facepay (URD §1.1 Cấu phần hệ thống)</td>
+</tr>
+<tr>
+<td align="left">Priority</td>
+<td align="left"><code>?</code> (<a href="#q-18">Q-18</a>)</td>
+</tr>
+<tr>
+<td align="left">Trigger</td>
+<td align="left">KH vào Cài đặt tiện ích, chọn "Hạn mức giao dịch chờ" (URD §1.1)</td>
+</tr>
+<tr>
+<td align="left">Pre-Condition</td>
+<td align="left">1. KH có tài khoản Vietbank, đăng nhập thành công<br>2. KH là khách hàng cá nhân — bên kiểm tra <code>?</code> (<a href="#q-13">Q-13</a>)<br>(URD §1.1)</td>
+</tr>
+<tr>
+<td align="left">Post-Condition</td>
+<td align="left">1. Cài đặt được ghi nhận trong hợp đồng Mobile Banking của KH, cài đặt cũ bị ghi đè (URD §1.1, LT-01)</td>
+</tr>
+<tr>
+<td align="left">Basic Flow</td>
+<td align="left"><strong>BF1 — Cài đặt lần đầu</strong><br>1. <strong>Client</strong> gọi <a href="#api-01">API-01</a>, mở <a href="#mh-02">MH-02</a> (<a href="#b1">§4 B1</a>)<br>2. <strong>Client</strong> validate <a href="#br-01">BR-01</a>, <a href="#br-02">BR-02</a>, <a href="#br-03">BR-03</a> khi KH bấm Tiếp tục (<a href="#b3">§4 B3</a>)<br>3. <strong>Client</strong> chạy xác thực Facepay (<a href="#b4">§4 B4</a>)<br>4. <strong>Client</strong> gọi <a href="#api-02">API-02</a> (<a href="#b5">§4 B5</a>)<br>5. OMNI Server ghi nhận cài đặt (<a href="#b6">§4 B6</a>)<br>6. <strong>Client</strong> hiển thị thông báo thành công (<a href="#b7">§4 B7</a>)</td>
+</tr>
+<tr>
+<td align="left">Alternative Flow</td>
+<td align="left">AF1 — KH đã có cài đặt: <a href="#mh-02">MH-02</a> hiện thêm giá trị hiện tại, luồng như BF1; OMNI Server ghi đè (URD LT-01)<br>AF2 — KH không cài đặt: Client không làm gì; OMNI Server áp mặc định (URD LT-02)</td>
+</tr>
+<tr>
+<td align="left">Exception Flow</td>
+<td align="left">EF1 — Hạn mức ngoài khoảng → <a href="#msg-01">MSG-01</a> (<a href="#b3">§4 B3</a>)<br>EF2 — Thời gian chờ ngoài khoảng → <a href="#msg-02">MSG-02</a> (<a href="#b3">§4 B3</a>)<br>EF3 — Xác thực Facepay thất bại → <a href="#msg-05">MSG-05</a> (<a href="#b4">§4 B4</a>)</td>
+</tr>
+</tbody></table>
+<h3 id="11-quy-tắc-nghiệp-vụ"><a id="s-1-1"></a>1.1. Quy tắc nghiệp vụ</h3>
+<table>
+<thead>
+<tr>
+<th align="left">Mã</th>
+<th align="left">Quy tắc</th>
+<th align="left">Bên thực thi</th>
+<th align="left">Nguồn</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><a id="br-01"></a>BR-01</td>
+<td align="left"><a href="#cfg-01">CFG-01</a> ≤ Hạn mức mới ≤ <a href="#cfg-02">CFG-02</a> (hạn mức gói KH). Bằng biên là hợp lệ</td>
+<td align="left"><strong>Client</strong> — giá trị CFG lấy từ <code>?</code> (<a href="#q-03">Q-03</a>)</td>
+<td align="left">URD §1.1 BR_01 · EX-01 "Nguồn: Client Validation"</td>
+</tr>
+<tr>
+<td align="left"><a id="br-02"></a>BR-02</td>
+<td align="left"><a href="#cfg-03">CFG-03</a> ≤ Thời gian chờ mới ≤ <a href="#cfg-04">CFG-04</a>. Bằng biên là hợp lệ</td>
+<td align="left"><strong>Client</strong> — giá trị CFG lấy từ <code>?</code> (<a href="#q-03">Q-03</a>)</td>
+<td align="left">URD §1.1 BR_02 · EX-02 "Nguồn: Client Validation"</td>
+</tr>
+<tr>
+<td align="left"><a id="br-03"></a>BR-03</td>
+<td align="left">Bắt buộc tick checkbox điều khoản mới được đi tiếp</td>
+<td align="left"><strong>Client</strong></td>
+<td align="left">URD §1.1 BR_03 · §1.3.2 bước 4</td>
+</tr>
+<tr>
+<td align="left"><a id="br-04"></a>BR-04</td>
+<td align="left">KH chưa cài đặt: áp <a href="#cfg-05">CFG-05</a>, <a href="#cfg-06">CFG-06</a> khi có giao dịch chuyển tiền</td>
+<td align="left">OMNI Server</td>
+<td align="left">URD §1.1 BR_04 · LT-02</td>
+</tr>
+<tr>
+<td align="left"><a id="br-05"></a>BR-05</td>
+<td align="left">Bắt buộc xác thực bằng Facepay</td>
+<td align="left"><strong>Client</strong> chạy xác thực · OMNI Server kiểm kết quả — cơ chế <code>?</code> (<a href="#q-01">Q-01</a>)</td>
+<td align="left">URD §1.1 BR_05</td>
+</tr>
+<tr>
+<td align="left"><a id="br-06"></a>BR-06</td>
+<td align="left">Xác thực thành công: ghi đè cài đặt cũ. Thất bại: giữ nguyên cài đặt cũ</td>
+<td align="left">OMNI Server</td>
+<td align="left">URD LT-01 · EX-03</td>
+</tr>
+</tbody></table>
+<h3 id="12-thuật-ngữ"><a id="s-1-2"></a>1.2. Thuật ngữ</h3>
+<table>
+<thead>
+<tr>
+<th align="left">Thuật ngữ</th>
+<th align="left">Nghĩa</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Giao dịch chờ</td>
+<td align="left">Giao dịch chuyển tiền vượt hạn mức KH cài đặt, được giữ lại trong thời gian chờ trước khi thực thi</td>
+</tr>
+<tr>
+<td align="left">Hạn mức gói</td>
+<td align="left">Hạn mức giao dịch theo gói dịch vụ của KH (BO_Gói) — dùng làm mức tối đa của <a href="#br-01">BR-01</a></td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="2-luồng-màn-hình"><a id="s-2"></a>2. Luồng màn hình</h2>
+<h3 id="21-sơ-đồ"><a id="s-2-1"></a>2.1. Sơ đồ</h3>
+<p><img src="../urd/assets/so-do-luong-tinh-nang.png" alt="Sơ đồ luồng — URD §1.3.1"></p>
+<p><em>Nhãn "Ghi nhận cài đặt đăng ký (BR_03)" trong sơ đồ URD trỏ tới BR_03 (tick điều khoản), không khớp nội dung — không ảnh hưởng Client.</em></p>
+<div class="mermaid" data-processed="true"><svg id="mermaid-1790242343329" width="100%" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="max-width: 1116px;" viewBox="-50 -10 1116 843" role="graphics-document document" aria-roledescription="sequence"><g><rect x="377" y="-5" fill="rgb(234,244,255)" stroke="rgb(0,0,0, 0.5)" width="200" height="837" class="rect"></rect><text x="477" y="15.5" dominant-baseline="central" alignment-baseline="central" class="text" style="text-anchor: middle; font-size: 16px; font-weight: 400; font-family: &quot;Segoe UI&quot;, Arial, sans-serif;"><tspan x="477" dy="0">Client</tspan></text></g><g><rect x="815" y="747" fill="#eaeaea" stroke="#666" width="150" height="65" name="Server" rx="3" ry="3" class="actor actor-bottom"></rect><text x="890" y="779.5" dominant-baseline="central" alignment-baseline="central" class="actor actor-box" style="text-anchor: middle; font-size: 16px; font-weight: 400; font-family: &quot;Segoe UI&quot;, Arial, sans-serif;"><tspan x="890" dy="0">OMNI Server</tspan></text></g><g><rect x="402" y="747" fill="#eaeaea" stroke="#666" width="150" height="65" name="App" rx="3" ry="3" class="actor actor-bottom"></rect><text x="477" y="779.5" dominant-baseline="central" alignment-baseline="central" class="actor actor-box" style="text-anchor: middle; font-size: 16px; font-weight: 400; font-family: &quot;Segoe UI&quot;, Arial, sans-serif;"><tspan x="477" dy="0">App</tspan></text></g><g></g><g><line id="actor2" x1="890" y1="96" x2="890" y2="747" class="actor-line 200" stroke-width="0.5px" stroke="#999" name="Server" data-et="life-line" data-id="Server"></line><g id="root-2" data-et="participant" data-type="participant" data-id="Server"><rect x="815" y="31" fill="#eaeaea" stroke="#666" width="150" height="65" name="Server" rx="3" ry="3" class="actor actor-top"></rect><text x="890" y="63.5" dominant-baseline="central" alignment-baseline="central" class="actor actor-box" style="text-anchor: middle; font-size: 16px; font-weight: 400; font-family: &quot;Segoe UI&quot;, Arial, sans-serif;"><tspan x="890" dy="0">OMNI Server</tspan></text></g></g><g><line id="actor1" x1="477" y1="96" x2="477" y2="747" class="actor-line 200" stroke-width="0.5px" stroke="#999" name="App" data-et="life-line" data-id="App"></line><g id="root-1" data-et="participant" data-type="participant" data-id="App"><rect x="402" y="31" fill="#eaeaea" stroke="#666" width="150" height="65" name="App" rx="3" ry="3" class="actor actor-top"></rect><text x="477" y="63.5" dominant-baseline="central" alignment-baseline="central" class="actor actor-box" style="text-anchor: middle; font-size: 16px; font-weight: 400; font-family: &quot;Segoe UI&quot;, Arial, sans-serif;"><tspan x="477" dy="0">App</tspan></text></g></g><g><line id="actor0" x1="75" y1="111" x2="75" y2="747" class="actor-line 200" stroke-width="0.5px" stroke="#999" name="KH" data-et="life-line" data-id="KH"></line></g><style>#mermaid-1790242343329{font-family:Segoe UI,Arial,sans-serif;font-size:16px;fill:#000000;}@keyframes edge-animation-frame{from{stroke-dashoffset:0;}}@keyframes dash{to{stroke-dashoffset:0;}}#mermaid-1790242343329 .edge-animation-slow{stroke-dasharray:9,5!important;stroke-dashoffset:900;animation:dash 50s linear infinite;stroke-linecap:round;}#mermaid-1790242343329 .edge-animation-fast{stroke-dasharray:9,5!important;stroke-dashoffset:900;animation:dash 20s linear infinite;stroke-linecap:round;}#mermaid-1790242343329 .error-icon{fill:#552222;}#mermaid-1790242343329 .error-text{fill:#552222;stroke:#552222;}#mermaid-1790242343329 .edge-thickness-normal{stroke-width:1px;}#mermaid-1790242343329 .edge-thickness-thick{stroke-width:3.5px;}#mermaid-1790242343329 .edge-pattern-solid{stroke-dasharray:0;}#mermaid-1790242343329 .edge-thickness-invisible{stroke-width:0;fill:none;}#mermaid-1790242343329 .edge-pattern-dashed{stroke-dasharray:3;}#mermaid-1790242343329 .edge-pattern-dotted{stroke-dasharray:2;}#mermaid-1790242343329 .marker{fill:#666;stroke:#666;}#mermaid-1790242343329 .marker.cross{stroke:#666;}#mermaid-1790242343329 svg{font-family:Segoe UI,Arial,sans-serif;font-size:16px;}#mermaid-1790242343329 p{margin:0;}#mermaid-1790242343329 .actor{stroke:hsl(0, 0%, 83%);fill:#eee;stroke-width:1;}#mermaid-1790242343329 rect.actor.outer-path[data-look="neo"]{filter:drop-shadow( 1px 2px 2px rgba(185,185,185,1));}#mermaid-1790242343329 rect.note[data-look="neo"]{stroke:#999;fill:#666;filter:drop-shadow( 1px 2px 2px rgba(185,185,185,1));}#mermaid-1790242343329 text.actor&gt;tspan{fill:#333;stroke:none;}#mermaid-1790242343329 .actor-line{stroke:hsl(0, 0%, 83%);}#mermaid-1790242343329 .innerArc{stroke-width:1.5;stroke-dasharray:none;}#mermaid-1790242343329 .messageLine0{stroke-width:1.5;stroke-dasharray:none;stroke:#333;}#mermaid-1790242343329 .messageLine1{stroke-width:1.5;stroke-dasharray:2,2;stroke:#333;}#mermaid-1790242343329 [id$="-arrowhead"] path{fill:#333;stroke:#333;}#mermaid-1790242343329 .sequenceNumber{fill:white;}#mermaid-1790242343329 [id$="-sequencenumber"]{fill:#333;}#mermaid-1790242343329 [id$="-crosshead"] path{fill:#333;stroke:#333;}#mermaid-1790242343329 .messageText{fill:#333;stroke:none;}#mermaid-1790242343329 .labelBox{stroke:hsl(0, 0%, 83%);fill:#eee;filter:none;}#mermaid-1790242343329 .labelText,#mermaid-1790242343329 .labelText&gt;tspan{fill:#333;stroke:none;}#mermaid-1790242343329 .loopText,#mermaid-1790242343329 .loopText&gt;tspan{fill:#333;stroke:none;}#mermaid-1790242343329 .sectionTitle,#mermaid-1790242343329 .sectionTitle&gt;tspan{fill:#333;stroke:none;}#mermaid-1790242343329 .loopLine{stroke-width:2px;stroke-dasharray:2,2;stroke:hsl(0, 0%, 83%);fill:hsl(0, 0%, 83%);}#mermaid-1790242343329 .note{stroke:#999;fill:#666;}#mermaid-1790242343329 .noteText,#mermaid-1790242343329 .noteText&gt;tspan{fill:#fff;stroke:none;font-weight:normal;}#mermaid-1790242343329 .activation0{fill:#f4f4f4;stroke:#666;}#mermaid-1790242343329 .activation1{fill:#f4f4f4;stroke:#666;}#mermaid-1790242343329 .activation2{fill:#f4f4f4;stroke:#666;}#mermaid-1790242343329 .actorPopupMenu{position:absolute;}#mermaid-1790242343329 .actorPopupMenuPanel{position:absolute;fill:#eee;box-shadow:0px 8px 16px 0px rgba(0,0,0,0.2);filter:drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));}#mermaid-1790242343329 .actor-man circle,#mermaid-1790242343329 line{fill:#eee;stroke-width:2px;}#mermaid-1790242343329 g rect.rect{filter:drop-shadow( 1px 2px 2px rgba(185,185,185,1));stroke:#999;}#mermaid-1790242343329 .node .neo-node{stroke:#999;}#mermaid-1790242343329 [data-look="neo"].node rect,#mermaid-1790242343329 [data-look="neo"].cluster rect,#mermaid-1790242343329 [data-look="neo"].node polygon{stroke:url(#mermaid-1790242343329-gradient);filter:drop-shadow( 1px 2px 2px rgba(185,185,185,1));}#mermaid-1790242343329 [data-look="neo"].swimlane.cluster rect{filter:none;}#mermaid-1790242343329 [data-look="neo"].node path{stroke:url(#mermaid-1790242343329-gradient);stroke-width:1px;}#mermaid-1790242343329 [data-look="neo"].node .outer-path{filter:drop-shadow( 1px 2px 2px rgba(185,185,185,1));}#mermaid-1790242343329 [data-look="neo"].node .neo-line path{stroke:#999;filter:none;}#mermaid-1790242343329 [data-look="neo"].node circle{stroke:url(#mermaid-1790242343329-gradient);filter:drop-shadow( 1px 2px 2px rgba(185,185,185,1));}#mermaid-1790242343329 [data-look="neo"].node circle .state-start{fill:#000000;}#mermaid-1790242343329 [data-look="neo"].icon-shape .icon{fill:url(#mermaid-1790242343329-gradient);filter:drop-shadow( 1px 2px 2px rgba(185,185,185,1));}#mermaid-1790242343329 [data-look="neo"].icon-shape .icon-neo path{stroke:url(#mermaid-1790242343329-gradient);filter:drop-shadow( 1px 2px 2px rgba(185,185,185,1));}#mermaid-1790242343329 :root{--mermaid-font-family:Segoe UI,Arial,sans-serif;}</style><g></g><defs><symbol id="mermaid-1790242343329-computer" width="24" height="24"><path transform="scale(.5)" d="M2 2v13h20v-13h-20zm18 11h-16v-9h16v9zm-10.228 6l.466-1h3.524l.467 1h-4.457zm14.228 3h-24l2-6h2.104l-1.33 4h18.45l-1.297-4h2.073l2 6zm-5-10h-14v-7h14v7z"></path></symbol></defs><defs><symbol id="mermaid-1790242343329-database" fill-rule="evenodd" clip-rule="evenodd"><path transform="scale(.5)" d="M12.258.001l.256.004.255.005.253.008.251.01.249.012.247.015.246.016.242.019.241.02.239.023.236.024.233.027.231.028.229.031.225.032.223.034.22.036.217.038.214.04.211.041.208.043.205.045.201.046.198.048.194.05.191.051.187.053.183.054.18.056.175.057.172.059.168.06.163.061.16.063.155.064.15.066.074.033.073.033.071.034.07.034.069.035.068.035.067.035.066.035.064.036.064.036.062.036.06.036.06.037.058.037.058.037.055.038.055.038.053.038.052.038.051.039.05.039.048.039.047.039.045.04.044.04.043.04.041.04.04.041.039.041.037.041.036.041.034.041.033.042.032.042.03.042.029.042.027.042.026.043.024.043.023.043.021.043.02.043.018.044.017.043.015.044.013.044.012.044.011.045.009.044.007.045.006.045.004.045.002.045.001.045v17l-.001.045-.002.045-.004.045-.006.045-.007.045-.009.044-.011.045-.012.044-.013.044-.015.044-.017.043-.018.044-.02.043-.021.043-.023.043-.024.043-.026.043-.027.042-.029.042-.03.042-.032.042-.033.042-.034.041-.036.041-.037.041-.039.041-.04.041-.041.04-.043.04-.044.04-.045.04-.047.039-.048.039-.05.039-.051.039-.052.038-.053.038-.055.038-.055.038-.058.037-.058.037-.06.037-.06.036-.062.036-.064.036-.064.036-.066.035-.067.035-.068.035-.069.035-.07.034-.071.034-.073.033-.074.033-.15.066-.155.064-.16.063-.163.061-.168.06-.172.059-.175.057-.18.056-.183.054-.187.053-.191.051-.194.05-.198.048-.201.046-.205.045-.208.043-.211.041-.214.04-.217.038-.22.036-.223.034-.225.032-.229.031-.231.028-.233.027-.236.024-.239.023-.241.02-.242.019-.246.016-.247.015-.249.012-.251.01-.253.008-.255.005-.256.004-.258.001-.258-.001-.256-.004-.255-.005-.253-.008-.251-.01-.249-.012-.247-.015-.245-.016-.243-.019-.241-.02-.238-.023-.236-.024-.234-.027-.231-.028-.228-.031-.226-.032-.223-.034-.22-.036-.217-.038-.214-.04-.211-.041-.208-.043-.204-.045-.201-.046-.198-.048-.195-.05-.19-.051-.187-.053-.184-.054-.179-.056-.176-.057-.172-.059-.167-.06-.164-.061-.159-.063-.155-.064-.151-.066-.074-.033-.072-.033-.072-.034-.07-.034-.069-.035-.068-.035-.067-.035-.066-.035-.064-.036-.063-.036-.062-.036-.061-.036-.06-.037-.058-.037-.057-.037-.056-.038-.055-.038-.053-.038-.052-.038-.051-.039-.049-.039-.049-.039-.046-.039-.046-.04-.044-.04-.043-.04-.041-.04-.04-.041-.039-.041-.037-.041-.036-.041-.034-.041-.033-.042-.032-.042-.03-.042-.029-.042-.027-.042-.026-.043-.024-.043-.023-.043-.021-.043-.02-.043-.018-.044-.017-.043-.015-.044-.013-.044-.012-.044-.011-.045-.009-.044-.007-.045-.006-.045-.004-.045-.002-.045-.001-.045v-17l.001-.045.002-.045.004-.045.006-.045.007-.045.009-.044.011-.045.012-.044.013-.044.015-.044.017-.043.018-.044.02-.043.021-.043.023-.043.024-.043.026-.043.027-.042.029-.042.03-.042.032-.042.033-.042.034-.041.036-.041.037-.041.039-.041.04-.041.041-.04.043-.04.044-.04.046-.04.046-.039.049-.039.049-.039.051-.039.052-.038.053-.038.055-.038.056-.038.057-.037.058-.037.06-.037.061-.036.062-.036.063-.036.064-.036.066-.035.067-.035.068-.035.069-.035.07-.034.072-.034.072-.033.074-.033.151-.066.155-.064.159-.063.164-.061.167-.06.172-.059.176-.057.179-.056.184-.054.187-.053.19-.051.195-.05.198-.048.201-.046.204-.045.208-.043.211-.041.214-.04.217-.038.22-.036.223-.034.226-.032.228-.031.231-.028.234-.027.236-.024.238-.023.241-.02.243-.019.245-.016.247-.015.249-.012.251-.01.253-.008.255-.005.256-.004.258-.001.258.001zm-9.258 20.499v.01l.001.021.003.021.004.022.005.021.006.022.007.022.009.023.01.022.011.023.012.023.013.023.015.023.016.024.017.023.018.024.019.024.021.024.022.025.023.024.024.025.052.049.056.05.061.051.066.051.07.051.075.051.079.052.084.052.088.052.092.052.097.052.102.051.105.052.11.052.114.051.119.051.123.051.127.05.131.05.135.05.139.048.144.049.147.047.152.047.155.047.16.045.163.045.167.043.171.043.176.041.178.041.183.039.187.039.19.037.194.035.197.035.202.033.204.031.209.03.212.029.216.027.219.025.222.024.226.021.23.02.233.018.236.016.24.015.243.012.246.01.249.008.253.005.256.004.259.001.26-.001.257-.004.254-.005.25-.008.247-.011.244-.012.241-.014.237-.016.233-.018.231-.021.226-.021.224-.024.22-.026.216-.027.212-.028.21-.031.205-.031.202-.034.198-.034.194-.036.191-.037.187-.039.183-.04.179-.04.175-.042.172-.043.168-.044.163-.045.16-.046.155-.046.152-.047.148-.048.143-.049.139-.049.136-.05.131-.05.126-.05.123-.051.118-.052.114-.051.11-.052.106-.052.101-.052.096-.052.092-.052.088-.053.083-.051.079-.052.074-.052.07-.051.065-.051.06-.051.056-.05.051-.05.023-.024.023-.025.021-.024.02-.024.019-.024.018-.024.017-.024.015-.023.014-.024.013-.023.012-.023.01-.023.01-.022.008-.022.006-.022.006-.022.004-.022.004-.021.001-.021.001-.021v-4.127l-.077.055-.08.053-.083.054-.085.053-.087.052-.09.052-.093.051-.095.05-.097.05-.1.049-.102.049-.105.048-.106.047-.109.047-.111.046-.114.045-.115.045-.118.044-.12.043-.122.042-.124.042-.126.041-.128.04-.13.04-.132.038-.134.038-.135.037-.138.037-.139.035-.142.035-.143.034-.144.033-.147.032-.148.031-.15.03-.151.03-.153.029-.154.027-.156.027-.158.026-.159.025-.161.024-.162.023-.163.022-.165.021-.166.02-.167.019-.169.018-.169.017-.171.016-.173.015-.173.014-.175.013-.175.012-.177.011-.178.01-.179.008-.179.008-.181.006-.182.005-.182.004-.184.003-.184.002h-.37l-.184-.002-.184-.003-.182-.004-.182-.005-.181-.006-.179-.008-.179-.008-.178-.01-.176-.011-.176-.012-.175-.013-.173-.014-.172-.015-.171-.016-.17-.017-.169-.018-.167-.019-.166-.02-.165-.021-.163-.022-.162-.023-.161-.024-.159-.025-.157-.026-.156-.027-.155-.027-.153-.029-.151-.03-.15-.03-.148-.031-.146-.032-.145-.033-.143-.034-.141-.035-.14-.035-.137-.037-.136-.037-.134-.038-.132-.038-.13-.04-.128-.04-.126-.041-.124-.042-.122-.042-.12-.044-.117-.043-.116-.045-.113-.045-.112-.046-.109-.047-.106-.047-.105-.048-.102-.049-.1-.049-.097-.05-.095-.05-.093-.052-.09-.051-.087-.052-.085-.053-.083-.054-.08-.054-.077-.054v4.127zm0-5.654v.011l.001.021.003.021.004.021.005.022.006.022.007.022.009.022.01.022.011.023.012.023.013.023.015.024.016.023.017.024.018.024.019.024.021.024.022.024.023.025.024.024.052.05.056.05.061.05.066.051.07.051.075.052.079.051.084.052.088.052.092.052.097.052.102.052.105.052.11.051.114.051.119.052.123.05.127.051.131.05.135.049.139.049.144.048.147.048.152.047.155.046.16.045.163.045.167.044.171.042.176.042.178.04.183.04.187.038.19.037.194.036.197.034.202.033.204.032.209.03.212.028.216.027.219.025.222.024.226.022.23.02.233.018.236.016.24.014.243.012.246.01.249.008.253.006.256.003.259.001.26-.001.257-.003.254-.006.25-.008.247-.01.244-.012.241-.015.237-.016.233-.018.231-.02.226-.022.224-.024.22-.025.216-.027.212-.029.21-.03.205-.032.202-.033.198-.035.194-.036.191-.037.187-.039.183-.039.179-.041.175-.042.172-.043.168-.044.163-.045.16-.045.155-.047.152-.047.148-.048.143-.048.139-.05.136-.049.131-.05.126-.051.123-.051.118-.051.114-.052.11-.052.106-.052.101-.052.096-.052.092-.052.088-.052.083-.052.079-.052.074-.051.07-.052.065-.051.06-.05.056-.051.051-.049.023-.025.023-.024.021-.025.02-.024.019-.024.018-.024.017-.024.015-.023.014-.023.013-.024.012-.022.01-.023.01-.023.008-.022.006-.022.006-.022.004-.021.004-.022.001-.021.001-.021v-4.139l-.077.054-.08.054-.083.054-.085.052-.087.053-.09.051-.093.051-.095.051-.097.05-.1.049-.102.049-.105.048-.106.047-.109.047-.111.046-.114.045-.115.044-.118.044-.12.044-.122.042-.124.042-.126.041-.128.04-.13.039-.132.039-.134.038-.135.037-.138.036-.139.036-.142.035-.143.033-.144.033-.147.033-.148.031-.15.03-.151.03-.153.028-.154.028-.156.027-.158.026-.159.025-.161.024-.162.023-.163.022-.165.021-.166.02-.167.019-.169.018-.169.017-.171.016-.173.015-.173.014-.175.013-.175.012-.177.011-.178.009-.179.009-.179.007-.181.007-.182.005-.182.004-.184.003-.184.002h-.37l-.184-.002-.184-.003-.182-.004-.182-.005-.181-.007-.179-.007-.179-.009-.178-.009-.176-.011-.176-.012-.175-.013-.173-.014-.172-.015-.171-.016-.17-.017-.169-.018-.167-.019-.166-.02-.165-.021-.163-.022-.162-.023-.161-.024-.159-.025-.157-.026-.156-.027-.155-.028-.153-.028-.151-.03-.15-.03-.148-.031-.146-.033-.145-.033-.143-.033-.141-.035-.14-.036-.137-.036-.136-.037-.134-.038-.132-.039-.13-.039-.128-.04-.126-.041-.124-.042-.122-.043-.12-.043-.117-.044-.116-.044-.113-.046-.112-.046-.109-.046-.106-.047-.105-.048-.102-.049-.1-.049-.097-.05-.095-.051-.093-.051-.09-.051-.087-.053-.085-.052-.083-.054-.08-.054-.077-.054v4.139zm0-5.666v.011l.001.02.003.022.004.021.005.022.006.021.007.022.009.023.01.022.011.023.012.023.013.023.015.023.016.024.017.024.018.023.019.024.021.025.022.024.023.024.024.025.052.05.056.05.061.05.066.051.07.051.075.052.079.051.084.052.088.052.092.052.097.052.102.052.105.051.11.052.114.051.119.051.123.051.127.05.131.05.135.05.139.049.144.048.147.048.152.047.155.046.16.045.163.045.167.043.171.043.176.042.178.04.183.04.187.038.19.037.194.036.197.034.202.033.204.032.209.03.212.028.216.027.219.025.222.024.226.021.23.02.233.018.236.017.24.014.243.012.246.01.249.008.253.006.256.003.259.001.26-.001.257-.003.254-.006.25-.008.247-.01.244-.013.241-.014.237-.016.233-.018.231-.02.226-.022.224-.024.22-.025.216-.027.212-.029.21-.03.205-.032.202-.033.198-.035.194-.036.191-.037.187-.039.183-.039.179-.041.175-.042.172-.043.168-.044.163-.045.16-.045.155-.047.152-.047.148-.048.143-.049.139-.049.136-.049.131-.051.126-.05.123-.051.118-.052.114-.051.11-.052.106-.052.101-.052.096-.052.092-.052.088-.052.083-.052.079-.052.074-.052.07-.051.065-.051.06-.051.056-.05.051-.049.023-.025.023-.025.021-.024.02-.024.019-.024.018-.024.017-.024.015-.023.014-.024.013-.023.012-.023.01-.022.01-.023.008-.022.006-.022.006-.022.004-.022.004-.021.001-.021.001-.021v-4.153l-.077.054-.08.054-.083.053-.085.053-.087.053-.09.051-.093.051-.095.051-.097.05-.1.049-.102.048-.105.048-.106.048-.109.046-.111.046-.114.046-.115.044-.118.044-.12.043-.122.043-.124.042-.126.041-.128.04-.13.039-.132.039-.134.038-.135.037-.138.036-.139.036-.142.034-.143.034-.144.033-.147.032-.148.032-.15.03-.151.03-.153.028-.154.028-.156.027-.158.026-.159.024-.161.024-.162.023-.163.023-.165.021-.166.02-.167.019-.169.018-.169.017-.171.016-.173.015-.173.014-.175.013-.175.012-.177.01-.178.01-.179.009-.179.007-.181.006-.182.006-.182.004-.184.003-.184.001-.185.001-.185-.001-.184-.001-.184-.003-.182-.004-.182-.006-.181-.006-.179-.007-.179-.009-.178-.01-.176-.01-.176-.012-.175-.013-.173-.014-.172-.015-.171-.016-.17-.017-.169-.018-.167-.019-.166-.02-.165-.021-.163-.023-.162-.023-.161-.024-.159-.024-.157-.026-.156-.027-.155-.028-.153-.028-.151-.03-.15-.03-.148-.032-.146-.032-.145-.033-.143-.034-.141-.034-.14-.036-.137-.036-.136-.037-.134-.038-.132-.039-.13-.039-.128-.041-.126-.041-.124-.041-.122-.043-.12-.043-.117-.044-.116-.044-.113-.046-.112-.046-.109-.046-.106-.048-.105-.048-.102-.048-.1-.05-.097-.049-.095-.051-.093-.051-.09-.052-.087-.052-.085-.053-.083-.053-.08-.054-.077-.054v4.153zm8.74-8.179l-.257.004-.254.005-.25.008-.247.011-.244.012-.241.014-.237.016-.233.018-.231.021-.226.022-.224.023-.22.026-.216.027-.212.028-.21.031-.205.032-.202.033-.198.034-.194.036-.191.038-.187.038-.183.04-.179.041-.175.042-.172.043-.168.043-.163.045-.16.046-.155.046-.152.048-.148.048-.143.048-.139.049-.136.05-.131.05-.126.051-.123.051-.118.051-.114.052-.11.052-.106.052-.101.052-.096.052-.092.052-.088.052-.083.052-.079.052-.074.051-.07.052-.065.051-.06.05-.056.05-.051.05-.023.025-.023.024-.021.024-.02.025-.019.024-.018.024-.017.023-.015.024-.014.023-.013.023-.012.023-.01.023-.01.022-.008.022-.006.023-.006.021-.004.022-.004.021-.001.021-.001.021.001.021.001.021.004.021.004.022.006.021.006.023.008.022.01.022.01.023.012.023.013.023.014.023.015.024.017.023.018.024.019.024.02.025.021.024.023.024.023.025.051.05.056.05.06.05.065.051.07.052.074.051.079.052.083.052.088.052.092.052.096.052.101.052.106.052.11.052.114.052.118.051.123.051.126.051.131.05.136.05.139.049.143.048.148.048.152.048.155.046.16.046.163.045.168.043.172.043.175.042.179.041.183.04.187.038.191.038.194.036.198.034.202.033.205.032.21.031.212.028.216.027.22.026.224.023.226.022.231.021.233.018.237.016.241.014.244.012.247.011.25.008.254.005.257.004.26.001.26-.001.257-.004.254-.005.25-.008.247-.011.244-.012.241-.014.237-.016.233-.018.231-.021.226-.022.224-.023.22-.026.216-.027.212-.028.21-.031.205-.032.202-.033.198-.034.194-.036.191-.038.187-.038.183-.04.179-.041.175-.042.172-.043.168-.043.163-.045.16-.046.155-.046.152-.048.148-.048.143-.048.139-.049.136-.05.131-.05.126-.051.123-.051.118-.051.114-.052.11-.052.106-.052.101-.052.096-.052.092-.052.088-.052.083-.052.079-.052.074-.051.07-.052.065-.051.06-.05.056-.05.051-.05.023-.025.023-.024.021-.024.02-.025.019-.024.018-.024.017-.023.015-.024.014-.023.013-.023.012-.023.01-.023.01-.022.008-.022.006-.023.006-.021.004-.022.004-.021.001-.021.001-.021-.001-.021-.001-.021-.004-.021-.004-.022-.006-.021-.006-.023-.008-.022-.01-.022-.01-.023-.012-.023-.013-.023-.014-.023-.015-.024-.017-.023-.018-.024-.019-.024-.02-.025-.021-.024-.023-.024-.023-.025-.051-.05-.056-.05-.06-.05-.065-.051-.07-.052-.074-.051-.079-.052-.083-.052-.088-.052-.092-.052-.096-.052-.101-.052-.106-.052-.11-.052-.114-.052-.118-.051-.123-.051-.126-.051-.131-.05-.136-.05-.139-.049-.143-.048-.148-.048-.152-.048-.155-.046-.16-.046-.163-.045-.168-.043-.172-.043-.175-.042-.179-.041-.183-.04-.187-.038-.191-.038-.194-.036-.198-.034-.202-.033-.205-.032-.21-.031-.212-.028-.216-.027-.22-.026-.224-.023-.226-.022-.231-.021-.233-.018-.237-.016-.241-.014-.244-.012-.247-.011-.25-.008-.254-.005-.257-.004-.26-.001-.26.001z"></path></symbol></defs><defs><symbol id="mermaid-1790242343329-clock" width="24" height="24"><path transform="scale(.5)" d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm5.848 12.459c.202.038.202.333.001.372-1.907.361-6.045 1.111-6.547 1.111-.719 0-1.301-.582-1.301-1.301 0-.512.77-5.447 1.125-7.445.034-.192.312-.181.343.014l.985 6.238 5.394 1.011z"></path></symbol></defs><defs><marker id="mermaid-1790242343329-arrowhead" refX="7.9" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto-start-reverse"><path d="M -1 0 L 10 5 L 0 10 z"></path></marker></defs><defs><marker id="mermaid-1790242343329-crosshead" markerWidth="15" markerHeight="8" orient="auto" refX="4" refY="4.5"><path fill="none" stroke="#000000" stroke-width="1pt" d="M 1,2 L 6,7 M 6,2 L 1,7" style="stroke-dasharray: 0, 0;"></path></marker></defs><defs><marker id="mermaid-1790242343329-filled-head" refX="15.5" refY="7" markerWidth="20" markerHeight="28" orient="auto"><path d="M 18,7 L9,13 L14,7 L9,1 Z"></path></marker></defs><defs><marker id="mermaid-1790242343329-sequencenumber" refX="15" refY="15" markerWidth="60" markerHeight="40" orient="auto"><circle cx="15" cy="15" r="6"></circle></marker></defs><defs><marker id="mermaid-1790242343329-solidTopArrowHead" refX="7.9" refY="7.25" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto-start-reverse"><path d="M 0 0 L 10 8 L 0 8 z"></path></marker></defs><defs><marker id="mermaid-1790242343329-solidBottomArrowHead" refX="7.9" refY="0.75" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto-start-reverse"><path d="M 0 0 L 10 0 L 0 8 z"></path></marker></defs><defs><marker id="mermaid-1790242343329-stickTopArrowHead" refX="7.5" refY="7" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto-start-reverse"><path d="M 0 0 L 7 7" stroke="black" stroke-width="1.5" fill="none"></path></marker></defs><defs><marker id="mermaid-1790242343329-stickBottomArrowHead" refX="7.5" refY="0" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto-start-reverse"><path d="M 0 7 L 7 0" stroke="black" stroke-width="1.5" fill="none"></path></marker></defs><g data-et="note" data-id="i6"><rect x="50" y="448" fill="#EDF2AE" stroke="#666" width="452" height="41" class="note"></rect><text x="276" y="453" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle" class="noteText" dy="1em" style="font-family: &quot;Segoe UI&quot;, Arial, sans-serif; font-size: 16px; font-weight: 400;"><tspan x="276">REF-01 Xác thực Facepay - cơ chế chờ Q-01</tspan></text></g><g class="actor-man actor-top" name="KH" data-et="participant" data-type="actor" data-id="KH" style="stroke: rgb(212, 212, 212);"><line id="actor-man-torso0" x1="75" y1="56" x2="75" y2="76"></line><line id="actor-man-arms0" x1="57" y1="64" x2="93" y2="64"></line><line x1="57" y1="91" x2="75" y2="76"></line><line x1="75" y1="76" x2="91" y2="91"></line><circle cx="75" cy="41" r="15" width="150" height="65"></circle><text x="75" y="98.5" dominant-baseline="central" alignment-baseline="central" class="actor actor-man" style="text-anchor: middle; font-size: 16px; font-weight: 400; font-family: &quot;Segoe UI&quot;, Arial, sans-serif;"><tspan x="75" dy="0">KH</tspan></text></g><text x="275" y="111" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle" class="messageText" dy="1em" style="font-family: &quot;Segoe UI&quot;, Arial, sans-serif; font-size: 16px; font-weight: 400;">MH-01 - chọn Hạn mức giao dịch chờ</text><line x1="76" y1="148" x2="473" y2="148" class="messageLine0" data-et="message" data-id="i0" data-from="KH" data-to="App" stroke-width="2" stroke="none" marker-end="url(#mermaid-1790242343329-arrowhead)" style="fill: none;"></line><text x="682" y="163" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle" class="messageText" dy="1em" style="font-family: &quot;Segoe UI&quot;, Arial, sans-serif; font-size: 16px; font-weight: 400;">API-01 lấy cài đặt hiện tại và tham số (dự kiến)</text><line x1="478" y1="200" x2="886" y2="200" class="messageLine0" data-et="message" data-id="i1" data-from="App" data-to="Server" stroke-width="2" stroke="none" marker-end="url(#mermaid-1790242343329-arrowhead)" style="fill: none;"></line><text x="685" y="215" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle" class="messageText" dy="1em" style="font-family: &quot;Segoe UI&quot;, Arial, sans-serif; font-size: 16px; font-weight: 400;">Status 00</text><line x1="889" y1="252" x2="481" y2="252" class="messageLine1" data-et="message" data-id="i2" data-from="Server" data-to="App" stroke-width="2" stroke="none" marker-end="url(#mermaid-1790242343329-arrowhead)" style="stroke-dasharray: 3, 3; fill: none;"></line><text x="278" y="267" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle" class="messageText" dy="1em" style="font-family: &quot;Segoe UI&quot;, Arial, sans-serif; font-size: 16px; font-weight: 400;">MH-02 - biến thể lần đầu hoặc đã có cài đặt</text><line x1="476" y1="304" x2="79" y2="304" class="messageLine1" data-et="message" data-id="i3" data-from="App" data-to="KH" stroke-width="2" stroke="none" marker-end="url(#mermaid-1790242343329-arrowhead)" style="stroke-dasharray: 3, 3; fill: none;"></line><text x="275" y="319" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle" class="messageText" dy="1em" style="font-family: &quot;Segoe UI&quot;, Arial, sans-serif; font-size: 16px; font-weight: 400;">Nhập, tick điều khoản, bấm Tiếp tục</text><line x1="76" y1="356" x2="473" y2="356" class="messageLine0" data-et="message" data-id="i4" data-from="KH" data-to="App" stroke-width="2" stroke="none" marker-end="url(#mermaid-1790242343329-arrowhead)" style="fill: none;"></line><text x="478" y="371" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle" class="messageText" dy="1em" style="font-family: &quot;Segoe UI&quot;, Arial, sans-serif; font-size: 16px; font-weight: 400;">Validate BR-01, BR-02, BR-03</text><path d="M 478,408 C 538,398 538,438 478,428" class="messageLine0" data-et="message" data-id="i5" data-from="App" data-to="App" stroke-width="2" stroke="none" marker-end="url(#mermaid-1790242343329-arrowhead)" style="fill: none;"></path><text x="682" y="504" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle" class="messageText" dy="1em" style="font-family: &quot;Segoe UI&quot;, Arial, sans-serif; font-size: 16px; font-weight: 400;">API-02 ghi nhận cài đặt (dự kiến)</text><line x1="478" y1="541" x2="886" y2="541" class="messageLine0" data-et="message" data-id="i7" data-from="App" data-to="Server" stroke-width="2" stroke="none" marker-end="url(#mermaid-1790242343329-arrowhead)" style="fill: none;"></line><text x="891" y="556" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle" class="messageText" dy="1em" style="font-family: &quot;Segoe UI&quot;, Arial, sans-serif; font-size: 16px; font-weight: 400;">Ghi hợp đồng MB, ghi đè cài đặt cũ</text><path d="M 891,593 C 951,583 951,623 891,613" class="messageLine0" data-et="message" data-id="i8" data-from="Server" data-to="Server" stroke-width="2" stroke="none" marker-end="url(#mermaid-1790242343329-arrowhead)" style="fill: none;"></path><text x="685" y="638" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle" class="messageText" dy="1em" style="font-family: &quot;Segoe UI&quot;, Arial, sans-serif; font-size: 16px; font-weight: 400;">Status 00</text><line x1="889" y1="675" x2="481" y2="675" class="messageLine1" data-et="message" data-id="i9" data-from="Server" data-to="App" stroke-width="2" stroke="none" marker-end="url(#mermaid-1790242343329-arrowhead)" style="stroke-dasharray: 3, 3; fill: none;"></line><text x="278" y="690" text-anchor="middle" dominant-baseline="middle" alignment-baseline="middle" class="messageText" dy="1em" style="font-family: &quot;Segoe UI&quot;, Arial, sans-serif; font-size: 16px; font-weight: 400;">MH-04 thông báo thành công - kiểu chờ Q-02</text><line x1="476" y1="727" x2="79" y2="727" class="messageLine1" data-et="message" data-id="i10" data-from="App" data-to="KH" stroke-width="2" stroke="none" marker-end="url(#mermaid-1790242343329-arrowhead)" style="stroke-dasharray: 3, 3; fill: none;"></line><g class="actor-man actor-bottom" name="KH" style="stroke: rgb(212, 212, 212);"><line id="actor-man-torso2" x1="75" y1="772" x2="75" y2="792"></line><line id="actor-man-arms2" x1="57" y1="780" x2="93" y2="780"></line><line x1="57" y1="807" x2="75" y2="792"></line><line x1="75" y1="792" x2="91" y2="807"></line><circle cx="75" cy="757" r="15" width="150" height="65"></circle><text x="75" y="814.5" dominant-baseline="central" alignment-baseline="central" class="actor actor-man" style="text-anchor: middle; font-size: 16px; font-weight: 400; font-family: &quot;Segoe UI&quot;, Arial, sans-serif;"><tspan x="75" dy="0">KH</tspan></text></g></svg></div>
+<h3 id="22-danh-sách-màn-hình"><a id="s-2-2"></a>2.2. Danh sách màn hình</h3>
+<table>
+<thead>
+<tr>
+<th align="left">MH</th>
+<th align="left">Tên màn hình</th>
+<th align="left">Kênh</th>
+<th align="left">Loại</th>
+<th align="left">Vào từ</th>
+<th align="left">Đi tới</th>
+<th align="left">Thiết kế</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><a id="mh-01"></a>MH-01</td>
+<td align="left">Cài đặt tiện ích</td>
+<td align="left">App</td>
+<td align="left"><strong>Sửa</strong> — <a href="#ref-02">REF-02</a></td>
+<td align="left">Có sẵn</td>
+<td align="left"><a href="#mh-02">MH-02</a></td>
+<td align="left">Ảnh URD MH1</td>
+</tr>
+<tr>
+<td align="left"><a id="mh-02"></a>MH-02</td>
+<td align="left">Cài đặt hạn mức giao dịch chờ</td>
+<td align="left">App</td>
+<td align="left"><strong>Mới</strong></td>
+<td align="left"><a href="#mh-01">MH-01</a></td>
+<td align="left"><a href="#mh-03">MH-03</a> · Back / Home <code>?</code> (<a href="#q-12">Q-12</a>)</td>
+<td align="left">Ảnh URD MH2, MH3</td>
+</tr>
+<tr>
+<td align="left"><a id="mh-03"></a>MH-03</td>
+<td align="left">Xác thực Facepay</td>
+<td align="left">App</td>
+<td align="left">Dùng lại — <a href="#ref-01">REF-01</a> (khác biệt ở <a href="#cl-06">CL-06</a>)</td>
+<td align="left"><a href="#mh-02">MH-02</a></td>
+<td align="left"><a href="#mh-04">MH-04</a> · hủy <code>?</code> (<a href="#q-12">Q-12</a>)</td>
+<td align="left">Ảnh URD MH4 (trang Confluence khác, không tải)</td>
+</tr>
+<tr>
+<td align="left"><a id="mh-04"></a>MH-04</td>
+<td align="left">Thông báo cài đặt thành công</td>
+<td align="left">App</td>
+<td align="left"><code>?</code> (<a href="#q-02">Q-02</a>)</td>
+<td align="left"><a href="#mh-03">MH-03</a></td>
+<td align="left"><code>?</code> (<a href="#q-02">Q-02</a>)</td>
+<td align="left">Chưa có</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="3-mô-tả-màn-hình"><a id="s-3"></a>3. Mô tả màn hình</h2>
+<p><a id="mh-01-spec"></a><strong>MH-01 — Cài đặt tiện ích</strong> · Loại: Sửa từ <a href="#ref-02">REF-02</a></p>
+<p><img src="../urd/assets/mh1-cai-dat-tien-ich.png" alt="MH-01"></p>
+<table>
+<thead>
+<tr>
+<th align="left">STT</th>
+<th align="left">Hạng mục</th>
+<th align="left">Kiểu hiển thị</th>
+<th align="left">Kiểu thao tác</th>
+<th align="left">Bắt buộc</th>
+<th align="left">Độ dài</th>
+<th align="left">VN</th>
+<th align="left">EN</th>
+<th align="left">Mô tả</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">1</td>
+<td align="left">(Mới) Mục Hạn mức giao dịch chờ</td>
+<td align="left">Icon + Label</td>
+<td align="left">Click</td>
+<td align="left">-</td>
+<td align="left">-</td>
+<td align="left">Hạn mức giao dịch chờ</td>
+<td align="left">Pending transaction limit <em>(tự dịch)</em></td>
+<td align="left">Nhóm "Quản lý", sau "Điều chỉnh hạn mức GD" (URD MH1). Hiển thị theo mã dịch vụ <code>?</code> (<a href="#q-05">Q-05</a>); icon <code>?</code> (<a href="#q-05">Q-05</a>). → <a href="#b1">§4 B1</a></td>
+</tr>
+</tbody></table>
+<p><a id="mh-02-spec"></a><strong>MH-02 — Cài đặt hạn mức giao dịch chờ</strong> · Loại: Mới</p>
+<table>
+<thead>
+<tr>
+<th align="center">Biến thể lần đầu (chưa có cài đặt)</th>
+<th align="center">Biến thể đã có cài đặt</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><img src="../urd/assets/mh2-cai-dat-han-muc-lan-dau.png" alt="MH-02 lần đầu"></td>
+<td align="center"><img src="../urd/assets/mh3-cai-dat-han-muc-da-co.png" alt="MH-02 đã có cài đặt"></td>
+</tr>
+<tr>
+<td align="center">URD MH2 "Mặc định lần đầu cài đặt"</td>
+<td align="center">URD MH3 — thêm dòng 4, 5, 9, 10</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th align="left">STT</th>
+<th align="left">Hạng mục</th>
+<th align="left">Kiểu hiển thị</th>
+<th align="left">Kiểu thao tác</th>
+<th align="left">Bắt buộc</th>
+<th align="left">Độ dài</th>
+<th align="left">VN</th>
+<th align="left">EN</th>
+<th align="left">Mô tả</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">1</td>
+<td align="left">Icon Back</td>
+<td align="left">Icon</td>
+<td align="left">Click</td>
+<td align="left">-</td>
+<td align="left">-</td>
+<td align="left">-</td>
+<td align="left">-</td>
+<td align="left">Đi tới <code>?</code> (<a href="#q-12">Q-12</a>)</td>
+</tr>
+<tr>
+<td align="left">2</td>
+<td align="left">Tiêu đề</td>
+<td align="left">Label</td>
+<td align="left">Read only</td>
+<td align="left">-</td>
+<td align="left">-</td>
+<td align="left">Cài đặt hạn mức giao dịch chờ</td>
+<td align="left">Pending transaction limit settings <em>(tự dịch)</em></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">3</td>
+<td align="left">Icon Home</td>
+<td align="left">Icon</td>
+<td align="left">Click</td>
+<td align="left">-</td>
+<td align="left">-</td>
+<td align="left">-</td>
+<td align="left">-</td>
+<td align="left">Đi tới <code>?</code> (<a href="#q-12">Q-12</a>)</td>
+</tr>
+<tr>
+<td align="left">4</td>
+<td align="left">Nhãn Hạn mức hiện tại</td>
+<td align="left">Label</td>
+<td align="left">Read only</td>
+<td align="left">-</td>
+<td align="left">-</td>
+<td align="left">Hạn mức hiện tại</td>
+<td align="left">Current limit <em>(tự dịch)</em></td>
+<td align="left">Chỉ hiện khi KH đã có cài đặt</td>
+</tr>
+<tr>
+<td align="left">5</td>
+<td align="left">Hạn mức hiện tại</td>
+<td align="left">Textbox (khóa)</td>
+<td align="left">Read only</td>
+<td align="left">-</td>
+<td align="left">-</td>
+<td align="left">-</td>
+<td align="left">-</td>
+<td align="left"><a href="#api-01">API-01</a> — hạn mức hiện tại. Phân cách hàng nghìn bằng "." (ảnh URD MH3: "20.000.000"), hậu tố "VND". Chỉ hiện khi KH đã có cài đặt</td>
+</tr>
+<tr>
+<td align="left">6</td>
+<td align="left">Nhãn Hạn mức mới</td>
+<td align="left">Label</td>
+<td align="left">Read only</td>
+<td align="left">-</td>
+<td align="left">-</td>
+<td align="left">Hạn mức mới</td>
+<td align="left">New limit <em>(tự dịch)</em></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">7</td>
+<td align="left">Hạn mức mới</td>
+<td align="left">Textbox</td>
+<td align="left">Number input</td>
+<td align="left">Y</td>
+<td align="left"><code>?</code> (<a href="#q-07">Q-07</a>)</td>
+<td align="left">Nhập số tiền</td>
+<td align="left">Enter amount <em>(tự dịch)</em></td>
+<td align="left">KH nhập. Hậu tố "VND". Bàn phím, phân cách khi gõ, paste: <code>?</code> (<a href="#q-07">Q-07</a>). Ở biến thể đã có cài đặt, bắt buộc hay không: <code>?</code> (<a href="#q-10">Q-10</a>). Kiểm <a href="#br-01">BR-01</a> → <a href="#msg-01">MSG-01</a>, <a href="#msg-04">MSG-04</a></td>
+</tr>
+<tr>
+<td align="left">8</td>
+<td align="left">Gợi ý khoảng hạn mức</td>
+<td align="left">Label</td>
+<td align="left">Read only</td>
+<td align="left">-</td>
+<td align="left">-</td>
+<td align="left">Từ {Hạn mức tối thiểu} đến {Hạn mức tối đa} VND</td>
+<td align="left">From {min limit} to {max limit} VND <em>(tự dịch)</em></td>
+<td align="left">{Hạn mức tối thiểu} = <a href="#cfg-01">CFG-01</a> · {Hạn mức tối đa} = <a href="#cfg-02">CFG-02</a></td>
+</tr>
+<tr>
+<td align="left">9</td>
+<td align="left">Nhãn Thời gian chờ hiện tại</td>
+<td align="left">Label</td>
+<td align="left">Read only</td>
+<td align="left">-</td>
+<td align="left">-</td>
+<td align="left">Thời gian chờ hiện tại</td>
+<td align="left">Current waiting time <em>(tự dịch)</em></td>
+<td align="left">Chỉ hiện khi KH đã có cài đặt</td>
+</tr>
+<tr>
+<td align="left">10</td>
+<td align="left">Thời gian chờ hiện tại</td>
+<td align="left">Textbox (khóa)</td>
+<td align="left">Read only</td>
+<td align="left">-</td>
+<td align="left">-</td>
+<td align="left">-</td>
+<td align="left">-</td>
+<td align="left"><a href="#api-01">API-01</a> — thời gian chờ hiện tại, hậu tố "giờ". Chỉ hiện khi KH đã có cài đặt</td>
+</tr>
+<tr>
+<td align="left">11</td>
+<td align="left">Nhãn Thời gian chờ mới</td>
+<td align="left">Label</td>
+<td align="left">Read only</td>
+<td align="left">-</td>
+<td align="left">-</td>
+<td align="left">Thời gian chờ mới</td>
+<td align="left">New waiting time <em>(tự dịch)</em></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">12</td>
+<td align="left">Thời gian chờ mới</td>
+<td align="left">Textbox</td>
+<td align="left">Number input</td>
+<td align="left">Y</td>
+<td align="left"><code>?</code> (<a href="#q-08">Q-08</a>)</td>
+<td align="left">Nhập số giờ</td>
+<td align="left">Enter hours <em>(tự dịch)</em></td>
+<td align="left">KH nhập. Hậu tố "giờ" / "hours" <em>(tự dịch)</em>. Số nguyên hay số lẻ: <code>?</code> (<a href="#q-08">Q-08</a>). Kiểm <a href="#br-02">BR-02</a> → <a href="#msg-02">MSG-02</a>, <a href="#msg-04">MSG-04</a></td>
+</tr>
+<tr>
+<td align="left">13</td>
+<td align="left">Gợi ý khoảng thời gian chờ</td>
+<td align="left">Label</td>
+<td align="left">Read only</td>
+<td align="left">-</td>
+<td align="left">-</td>
+<td align="left">Từ {Thời gian tối thiểu} đến {Thời gian tối đa} giờ</td>
+<td align="left">From {min time} to {max time} hours <em>(tự dịch)</em></td>
+<td align="left"><a href="#cfg-03">CFG-03</a>, <a href="#cfg-04">CFG-04</a></td>
+</tr>
+<tr>
+<td align="left">14</td>
+<td align="left">Checkbox điều khoản</td>
+<td align="left">Checkbox</td>
+<td align="left">Check</td>
+<td align="left">Y</td>
+<td align="left">-</td>
+<td align="left">Tôi đã đọc và đồng ý với Điều khoản điều kiện giao dịch.</td>
+<td align="left">I have read and agree to the Terms and conditions of the transaction. <em>(tự dịch)</em></td>
+<td align="left"><a href="#br-03">BR-03</a>. Thời điểm hiện và trạng thái mặc định: <code>?</code> (<a href="#q-04">Q-04</a>). Chưa tick → <a href="#msg-03">MSG-03</a></td>
+</tr>
+<tr>
+<td align="left">15</td>
+<td align="left">Link Điều khoản điều kiện</td>
+<td align="left">Link</td>
+<td align="left">Click</td>
+<td align="left">-</td>
+<td align="left">-</td>
+<td align="left">Điều khoản điều kiện</td>
+<td align="left">Terms and conditions <em>(tự dịch)</em></td>
+<td align="left">Mở <code>?</code> (<a href="#q-11">Q-11</a>)</td>
+</tr>
+<tr>
+<td align="left">16</td>
+<td align="left">Tiếp tục</td>
+<td align="left">Button</td>
+<td align="left">Click</td>
+<td align="left">-</td>
+<td align="left">-</td>
+<td align="left">Tiếp tục</td>
+<td align="left">Continue <em>(tự dịch)</em></td>
+<td align="left">Enable khi nào: <code>?</code> (<a href="#q-09">Q-09</a>). → <a href="#b3">§4 B3</a></td>
+</tr>
+</tbody></table>
+<p><a id="mh-04-spec"></a><strong>MH-04 — Thông báo cài đặt thành công</strong> · Loại: <code>?</code> (<a href="#q-02">Q-02</a>)</p>
+<p>Chưa có design. URD chỉ ghi "Hiển thị thông báo thành công" (URD §1.3.1). Nội dung: <a href="#msg-07">MSG-07</a>.</p>
+<hr>
+<h2 id="4-logic-xử-lý"><a id="s-4"></a>4. Logic xử lý</h2>
+<table>
+<thead>
+<tr>
+<th align="left">Bước</th>
+<th align="left">Sự kiện</th>
+<th align="left">Tác nhân</th>
+<th align="left">Xử lý</th>
+<th align="left">Thông báo</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><a id="b1"></a>B1</td>
+<td align="left">KH bấm "Hạn mức giao dịch chờ" ở <a href="#mh-01">MH-01</a></td>
+<td align="left"><strong>Client</strong></td>
+<td align="left">Gọi <a href="#api-01">API-01</a>.<br>Status 00, KH chưa có cài đặt → <a href="#mh-02">MH-02</a> biến thể lần đầu.<br>Status 00, KH đã có cài đặt → <a href="#mh-02">MH-02</a> biến thể đã có cài đặt, điền dòng 5, 10.<br>Lỗi → <a href="#msg-06">MSG-06</a></td>
+<td align="left"><a href="#msg-06">MSG-06</a>, <a href="#msg-08">MSG-08</a></td>
+</tr>
+<tr>
+<td align="left"><a id="b2"></a>B2</td>
+<td align="left"></td>
+<td align="left">OMNI Server</td>
+<td align="left"><a href="#api-01">API-01</a>: trả cài đặt hiện tại (nếu có) và tham số <a href="#cfg-01">CFG-01</a> … <a href="#cfg-04">CFG-04</a> — <code>?</code> (<a href="#q-03">Q-03</a>)</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a id="b3"></a>B3</td>
+<td align="left">KH bấm Tiếp tục ở <a href="#mh-02">MH-02</a></td>
+<td align="left"><strong>Client</strong></td>
+<td align="left">Kiểm trường bắt buộc → <a href="#msg-04">MSG-04</a>.<br>Kiểm <a href="#br-01">BR-01</a> → <a href="#msg-01">MSG-01</a>; <a href="#br-02">BR-02</a> → <a href="#msg-02">MSG-02</a>; <a href="#br-03">BR-03</a> → <a href="#msg-03">MSG-03</a>.<br>Thời điểm validate (khi gõ / rời ô / bấm Tiếp tục): <code>?</code> (<a href="#q-09">Q-09</a>).<br>Hợp lệ → <a href="#b4">§4 B4</a></td>
+<td align="left"><a href="#msg-01">MSG-01</a>, <a href="#msg-02">MSG-02</a>, <a href="#msg-03">MSG-03</a>, <a href="#msg-04">MSG-04</a></td>
+</tr>
+<tr>
+<td align="left"><a id="b4"></a>B4</td>
+<td align="left"></td>
+<td align="left"><strong>Client</strong></td>
+<td align="left">Xác thực Facepay (<a href="#mh-03">MH-03</a>) theo <a href="#ref-01">REF-01</a>, cơ chế <code>?</code> (<a href="#q-01">Q-01</a>).<br>Thành công → <a href="#b5">§4 B5</a>.<br>Thất bại → <a href="#msg-05">MSG-05</a>.<br>KH hủy → <code>?</code> (<a href="#q-12">Q-12</a>)</td>
+<td align="left"><a href="#msg-05">MSG-05</a></td>
+</tr>
+<tr>
+<td align="left"><a id="b5"></a>B5</td>
+<td align="left">Xác thực thành công</td>
+<td align="left"><strong>Client</strong></td>
+<td align="left">Gọi <a href="#api-02">API-02</a> gửi Hạn mức mới, Thời gian chờ mới và kết quả xác thực (dạng dữ liệu <code>?</code> <a href="#q-01">Q-01</a>)</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a id="b6"></a>B6</td>
+<td align="left"></td>
+<td align="left">OMNI Server</td>
+<td align="left"><a href="#api-02">API-02</a>: kiểm kết quả xác thực, áp <a href="#br-06">BR-06</a>, trả Status 00 hoặc mã lỗi</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a id="b7"></a>B7</td>
+<td align="left">Nhận kết quả <a href="#api-02">API-02</a></td>
+<td align="left"><strong>Client</strong></td>
+<td align="left">Status 00 → <a href="#mh-04">MH-04</a> (<a href="#msg-07">MSG-07</a>), sau đó đi tới <code>?</code> (<a href="#q-02">Q-02</a>).<br>Lỗi → <a href="#msg-06">MSG-06</a></td>
+<td align="left"><a href="#msg-06">MSG-06</a>, <a href="#msg-07">MSG-07</a>, <a href="#msg-08">MSG-08</a></td>
+</tr>
+</tbody></table>
+<h3 id="41-danh-sách-thông-báo"><a id="s-4-1"></a>4.1. Danh sách thông báo</h3>
+<table>
+<thead>
+<tr>
+<th align="left">Mã</th>
+<th align="left">Bước</th>
+<th align="left">Trường hợp</th>
+<th align="left">Mã lỗi</th>
+<th align="left">Kiểu</th>
+<th align="left">VN</th>
+<th align="left">EN</th>
+<th align="left">Nút → Hành động</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><a id="msg-01"></a>MSG-01</td>
+<td align="left">B3</td>
+<td align="left">Hạn mức mới ngoài khoảng <a href="#br-01">BR-01</a></td>
+<td align="left">- (URD E-TGC-001, lỗi Client)</td>
+<td align="left"><code>?</code> (<a href="#q-09">Q-09</a>)</td>
+<td align="left">Hạn mức cài đặt phải từ {Hạn mức tối thiểu theo tham số cấu hình} triệu đến {hạn mức gói} của Quý khách.</td>
+<td align="left">The configured transaction limit must be between{Hạn mức tối thiểu theo tham số cấu hình} million and your {hạn mức gói}. Please check again.</td>
+<td align="left">KH nhập lại, ở lại <a href="#mh-02">MH-02</a> (URD §1.4). Câu chữ: <a href="#q-16">Q-16</a></td>
+</tr>
+<tr>
+<td align="left"><a id="msg-02"></a>MSG-02</td>
+<td align="left">B3</td>
+<td align="left">Thời gian chờ mới ngoài khoảng <a href="#br-02">BR-02</a></td>
+<td align="left">- (URD E-TGC-002, lỗi Client)</td>
+<td align="left"><code>?</code> (<a href="#q-09">Q-09</a>)</td>
+<td align="left">Thời gian chờ phải từ {Thời gian chờ tối thiểu theo tham số cấu hình} đến {Thời gian chờ tối đa theo tham số cấu hình} giờ. Quý khách vui lòng kiểm tra lại</td>
+<td align="left">The waiting time must be between {Thời gian chờ tối thiểu theo tham số cấu hình} and {Thời gian chờ tối đa theo tham số cấu hình} hours. Please check again.</td>
+<td align="left">KH nhập lại, ở lại <a href="#mh-02">MH-02</a> (URD §1.4)</td>
+</tr>
+<tr>
+<td align="left"><a id="msg-03"></a>MSG-03</td>
+<td align="left">B3</td>
+<td align="left">Chưa tick điều khoản (URD BR_03: "Chặn show thông báo")</td>
+<td align="left">-</td>
+<td align="left"><code>?</code> (<a href="#q-09">Q-09</a>)</td>
+<td align="left"><code>?</code> (<a href="#q-09">Q-09</a>)</td>
+<td align="left"><code>?</code> (<a href="#q-09">Q-09</a>)</td>
+<td align="left"><code>?</code> (<a href="#q-09">Q-09</a>)</td>
+</tr>
+<tr>
+<td align="left"><a id="msg-04"></a>MSG-04</td>
+<td align="left">B3</td>
+<td align="left">Để trống Hạn mức mới / Thời gian chờ mới</td>
+<td align="left">-</td>
+<td align="left"><code>?</code> (<a href="#q-09">Q-09</a>)</td>
+<td align="left">Vui lòng nhập {tên trường}</td>
+<td align="left">Theo mẫu câu chung</td>
+<td align="left">Ở lại <a href="#mh-02">MH-02</a> (mẫu chung — srs-profile <a href="#s-6">§6</a>)</td>
+</tr>
+<tr>
+<td align="left"><a id="msg-05"></a>MSG-05</td>
+<td align="left">B4</td>
+<td align="left">Xác thực Facepay thất bại: chưa thu thập STH, STH bị khóa, khuôn mặt không khớp, sai quá số lần</td>
+<td align="left">URD E-TGC-003</td>
+<td align="left"><a href="#ref-01">REF-01</a></td>
+<td align="left"><a href="#ref-01">REF-01</a> (RC-01 §5.7)</td>
+<td align="left"><a href="#ref-01">REF-01</a></td>
+<td align="left"><a href="#ref-01">REF-01</a> — thử lại theo giới hạn PTXT (URD EX-03)</td>
+</tr>
+<tr>
+<td align="left"><a id="msg-06"></a>MSG-06</td>
+<td align="left">B1, B7</td>
+<td align="left">OMNI Server trả mã lỗi</td>
+<td align="left">Theo OMNI Server</td>
+<td align="left">Popup</td>
+<td align="left">Theo OMNI Server trả</td>
+<td align="left"></td>
+<td align="left">Mặc định: Đóng → tắt popup, ở lại màn hiện tại</td>
+</tr>
+<tr>
+<td align="left"><a id="msg-07"></a>MSG-07</td>
+<td align="left">B7</td>
+<td align="left">Cài đặt thành công</td>
+<td align="left">-</td>
+<td align="left"><code>?</code> (<a href="#q-02">Q-02</a>)</td>
+<td align="left"><code>?</code> (<a href="#q-02">Q-02</a>)</td>
+<td align="left"><code>?</code> (<a href="#q-02">Q-02</a>)</td>
+<td align="left"><code>?</code> (<a href="#q-02">Q-02</a>)</td>
+</tr>
+<tr>
+<td align="left"><a id="msg-08"></a>MSG-08</td>
+<td align="left">Mọi bước</td>
+<td align="left">Lỗi chung</td>
+<td align="left">-</td>
+<td align="left">-</td>
+<td align="left">Theo xử lý mặc định của App</td>
+<td align="left"></td>
+<td align="left">Mặc định</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="5-api"><a id="s-5"></a>5. API</h2>
+<h3 id="51-danh-sách-api"><a id="s-5-1"></a>5.1. Danh sách API</h3>
+<table>
+<thead>
+<tr>
+<th align="left">Mã</th>
+<th align="left">Tên API</th>
+<th align="left">Bên gọi</th>
+<th align="left">Gọi ở bước</th>
+<th align="left">Endpoint</th>
+<th align="left">Hợp đồng</th>
+<th align="left">Nguồn</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><a id="api-01"></a>API-01</td>
+<td align="left">Lấy cài đặt hạn mức giao dịch chờ và tham số <em>(dự kiến)</em></td>
+<td align="left"><strong>Client</strong></td>
+<td align="left"><a href="#b1">§4 B1</a></td>
+<td align="left"><code>?</code> (<a href="#q-06">Q-06</a>)</td>
+<td align="left"><em>Dự kiến</em></td>
+<td align="left">URD MH3 (hiển thị giá trị hiện tại) · <a href="#q-03">Q-03</a></td>
+</tr>
+<tr>
+<td align="left"><a id="api-02"></a>API-02</td>
+<td align="left">Ghi nhận cài đặt hạn mức giao dịch chờ <em>(dự kiến)</em></td>
+<td align="left"><strong>Client</strong></td>
+<td align="left"><a href="#b5">§4 B5</a></td>
+<td align="left"><code>?</code> (<a href="#q-06">Q-06</a>)</td>
+<td align="left"><em>Dự kiến</em></td>
+<td align="left">URD §1.3.1 "Gửi yêu cầu ghi nhận đăng ký"</td>
+</tr>
+<tr>
+<td align="left"><a id="api-03"></a>API-03</td>
+<td align="left">API của khối xác thực (khởi tạo, <code>auth-method/init</code>, <code>confirm</code>) — chỉ khi <a href="#q-01">Q-01</a> chọn luồng RC-01</td>
+<td align="left"><strong>Client</strong></td>
+<td align="left"><a href="#b4">§4 B4</a></td>
+<td align="left"><code>?</code> (<a href="#q-06">Q-06</a>)</td>
+<td align="left">Theo <a href="#ref-01">REF-01</a></td>
+<td align="left"><a href="#ref-01">REF-01</a> · <a href="#q-01">Q-01</a></td>
+</tr>
+<tr>
+<td align="left"><a id="api-04"></a>API-04</td>
+<td align="left">Ghi hợp đồng Mobile Banking trên trang quản trị</td>
+<td align="left">OMNI Server</td>
+<td align="left"><a href="#b6">§4 B6</a></td>
+<td align="left">-</td>
+<td align="left">-</td>
+<td align="left"><em>Chỉ để hiểu luồng, không sinh task Client</em></td>
+</tr>
+</tbody></table>
+<h3 id="52-dữ-liệu-client-dùng"><a id="s-5-2"></a>5.2. Dữ liệu Client dùng</h3>
+<table>
+<thead>
+<tr>
+<th align="left">API</th>
+<th align="left">Chiều</th>
+<th align="left">Field</th>
+<th align="left">Dùng ở</th>
+<th align="left">Ghi chú</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><a href="#api-01">API-01</a></td>
+<td align="left">Response</td>
+<td align="left">Trạng thái KH đã có / chưa có cài đặt <em>(dự kiến)</em></td>
+<td align="left"><a href="#b1">§4 B1</a> rẽ biến thể <a href="#mh-02">MH-02</a></td>
+<td align="left">URD MH2, MH3</td>
+</tr>
+<tr>
+<td align="left"><a href="#api-01">API-01</a></td>
+<td align="left">Response</td>
+<td align="left">Hạn mức hiện tại <em>(dự kiến)</em></td>
+<td align="left"><a href="#mh-02">MH-02</a> dòng 5</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="#api-01">API-01</a></td>
+<td align="left">Response</td>
+<td align="left">Thời gian chờ hiện tại <em>(dự kiến)</em></td>
+<td align="left"><a href="#mh-02">MH-02</a> dòng 10</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="#api-01">API-01</a></td>
+<td align="left">Response</td>
+<td align="left">Hạn mức tối thiểu, hạn mức gói, thời gian chờ tối thiểu / tối đa <em>(dự kiến)</em></td>
+<td align="left"><a href="#br-01">BR-01</a>, <a href="#br-02">BR-02</a>, <a href="#mh-02">MH-02</a> dòng 8, 13</td>
+<td align="left"><a href="#q-03">Q-03</a></td>
+</tr>
+<tr>
+<td align="left"><a href="#api-02">API-02</a></td>
+<td align="left">Request</td>
+<td align="left">Hạn mức mới <em>(dự kiến)</em></td>
+<td align="left"><a href="#b5">§4 B5</a></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="#api-02">API-02</a></td>
+<td align="left">Request</td>
+<td align="left">Thời gian chờ mới <em>(dự kiến)</em></td>
+<td align="left"><a href="#b5">§4 B5</a></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="#api-02">API-02</a></td>
+<td align="left">Request</td>
+<td align="left">Kết quả xác thực Facepay <em>(dự kiến)</em></td>
+<td align="left"><a href="#b5">§4 B5</a></td>
+<td align="left"><a href="#q-01">Q-01</a></td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="6-tham-số-cấu-hình"><a id="s-6"></a>6. Tham số cấu hình</h2>
+<table>
+<thead>
+<tr>
+<th align="left">Mã</th>
+<th align="left">Tham số</th>
+<th align="left">Mã tham số</th>
+<th align="left">Giá trị</th>
+<th align="left">Nơi cấu hình</th>
+<th align="left">Client lấy từ đâu</th>
+<th align="left">Dùng ở</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><a id="cfg-01"></a>CFG-01</td>
+<td align="left">Hạn mức tối thiểu được cài đặt</td>
+<td align="left"><code>?</code> (<a href="#q-15">Q-15</a>)</td>
+<td align="left">100.000.000 VND (URD §1.4 E-TGC-001)</td>
+<td align="left"><code>?</code> (<a href="#q-15">Q-15</a>)</td>
+<td align="left"><code>?</code> (<a href="#q-03">Q-03</a>)</td>
+<td align="left"><a href="#br-01">BR-01</a> · <a href="#mh-02">MH-02</a> dòng 8 · <a href="#msg-01">MSG-01</a></td>
+</tr>
+<tr>
+<td align="left"><a id="cfg-02"></a>CFG-02</td>
+<td align="left">Hạn mức tối đa = hạn mức gói của KH</td>
+<td align="left">-</td>
+<td align="left">Theo gói KH</td>
+<td align="left">BO_Gói</td>
+<td align="left"><code>?</code> (<a href="#q-03">Q-03</a>)</td>
+<td align="left"><a href="#br-01">BR-01</a> · <a href="#mh-02">MH-02</a> dòng 8 · <a href="#msg-01">MSG-01</a></td>
+</tr>
+<tr>
+<td align="left"><a id="cfg-03"></a>CFG-03</td>
+<td align="left">Thời gian chờ tối thiểu</td>
+<td align="left"><code>?</code> (<a href="#q-15">Q-15</a>)</td>
+<td align="left">24 giờ (URD EX-02)</td>
+<td align="left"><code>?</code> (<a href="#q-15">Q-15</a>)</td>
+<td align="left"><code>?</code> (<a href="#q-03">Q-03</a>)</td>
+<td align="left"><a href="#br-02">BR-02</a> · <a href="#mh-02">MH-02</a> dòng 13 · <a href="#msg-02">MSG-02</a></td>
+</tr>
+<tr>
+<td align="left"><a id="cfg-04"></a>CFG-04</td>
+<td align="left">Thời gian chờ tối đa</td>
+<td align="left"><code>?</code> (<a href="#q-15">Q-15</a>)</td>
+<td align="left">72 giờ (URD EX-02)</td>
+<td align="left"><code>?</code> (<a href="#q-15">Q-15</a>)</td>
+<td align="left"><code>?</code> (<a href="#q-03">Q-03</a>)</td>
+<td align="left"><a href="#br-02">BR-02</a> · <a href="#mh-02">MH-02</a> dòng 13 · <a href="#msg-02">MSG-02</a></td>
+</tr>
+<tr>
+<td align="left"><a id="cfg-05"></a>CFG-05</td>
+<td align="left">Hạn mức mặc định khi KH chưa cài đặt</td>
+<td align="left"><code>?</code> (<a href="#q-15">Q-15</a>)</td>
+<td align="left">400.000.000 VND (URD §1.1 BR_04)</td>
+<td align="left"><code>?</code> (<a href="#q-15">Q-15</a>)</td>
+<td align="left">Không dùng</td>
+<td align="left"><a href="#br-04">BR-04</a></td>
+</tr>
+<tr>
+<td align="left"><a id="cfg-06"></a>CFG-06</td>
+<td align="left">Thời gian chờ mặc định khi KH chưa cài đặt</td>
+<td align="left"><code>?</code> (<a href="#q-15">Q-15</a>)</td>
+<td align="left">24 giờ (URD §1.1 BR_04)</td>
+<td align="left"><code>?</code> (<a href="#q-15">Q-15</a>)</td>
+<td align="left">Không dùng</td>
+<td align="left"><a href="#br-04">BR-04</a></td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="7-điểm-cần-chốt"><a id="s-7"></a>7. Điểm cần chốt</h2>
+<table>
+<thead>
+<tr>
+<th align="left">Mã</th>
+<th align="left">Câu hỏi</th>
+<th align="left">Vì sao chưa rõ</th>
+<th align="left">Đề xuất</th>
+<th align="left">Người chốt</th>
+<th align="center">Mức</th>
+<th align="left">Ảnh hưởng</th>
+<th align="left">Trạng thái</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><a id="q-01"></a>Q-01</td>
+<td align="left">Xác thực Facepay theo cơ chế nào, và có kèm OTP không?<br>(a) Theo luồng RC-01: khởi tạo → FaceSDK → <code>auth-method/init</code> kèm chữ ký eKYC → <code>confirm</code><br>(b) Gọi FaceSDK đứng riêng (như <code>ScreenSDKFacePay</code> ở luồng đăng nhập) rồi gửi chữ ký eKYC kèm <a href="#api-02">API-02</a><br>(c) Một API xác thực Facepay riêng</td>
+<td align="left">URD BR_05 chỉ ghi "Bắt buộc xác thực bằng Facepay"; sơ đồ URD §1.3.1 ghi "Xác thực Facepay thành công → Gửi yêu cầu ghi nhận đăng ký". RC-01 không có biến thể chỉ dùng Facepay. Mỗi cách là một bộ API và khối lượng code khác nhau</td>
+<td align="left">(a) với PTXT cố định là Facepay, tái dùng <code>BaseAuthMethodActivity</code></td>
+<td align="left">BA + OMNI Server</td>
+<td align="center">🔴</td>
+<td align="left"><a href="#ref-01">REF-01</a>, <a href="#cl-06">CL-06</a>, <a href="#cl-07">CL-07</a>, <a href="#br-05">BR-05</a>, <a href="#api-02">API-02</a>, <a href="#api-03">API-03</a>, <a href="#mh-03">MH-03</a></td>
+<td align="left">Chờ</td>
+</tr>
+<tr>
+<td align="left"><a id="q-02"></a>Q-02</td>
+<td align="left">"Hiển thị thông báo thành công" là popup, toast hay màn kết quả RC-03? Nội dung VN/EN? Sau khi đóng thì về đâu (<a href="#mh-01">MH-01</a> / Trang chủ / ở lại <a href="#mh-02">MH-02</a> với giá trị mới)?</td>
+<td align="left">URD chỉ có một câu trong sơ đồ §1.3.1, không có ảnh</td>
+<td align="left">Dialog thành công, "Đóng" → <a href="#mh-01">MH-01</a></td>
+<td align="left">BA</td>
+<td align="center">🔴</td>
+<td align="left"><a href="#mh-04">MH-04</a>, <a href="#msg-07">MSG-07</a>, <a href="#cl-08">CL-08</a></td>
+<td align="left">Chờ</td>
+</tr>
+<tr>
+<td align="left"><a id="q-03"></a>Q-03</td>
+<td align="left">App lấy cài đặt hiện tại, <a href="#cfg-01">CFG-01</a> … <a href="#cfg-04">CFG-04</a> từ API nào? Có phải cùng <a href="#api-01">API-01</a> không? App có tự validate <a href="#br-01">BR-01</a>, <a href="#br-02">BR-02</a> bằng giá trị đó không?</td>
+<td align="left">URD ghi "theo tham số cấu hình" mà không nói Client lấy ở đâu; EX-01, EX-02 ghi "Client Validation"</td>
+<td align="left">Cùng <a href="#api-01">API-01</a></td>
+<td align="left">OMNI Server</td>
+<td align="center">🔴</td>
+<td align="left"><a href="#api-01">API-01</a>, <a href="#br-01">BR-01</a>, <a href="#br-02">BR-02</a>, <a href="#cfg-01">CFG-01</a> … <a href="#cfg-04">CFG-04</a>, <a href="#cl-02">CL-02</a>, <a href="#cl-04">CL-04</a></td>
+<td align="left">Chờ</td>
+</tr>
+<tr>
+<td align="left"><a id="q-04"></a>Q-04</td>
+<td align="left">Checkbox điều khoản luôn hiện, hay chỉ hiện sau khi validate hợp lệ? Mặc định có tick không?</td>
+<td align="left">URD §1.3.2 bước 3: "Hợp lệ: hiển thị checkbox điều khoản"; ảnh MH2, MH3: checkbox luôn hiện và đang tick</td>
+<td align="left">Luôn hiện, mặc định không tick</td>
+<td align="left">BA</td>
+<td align="center">🔴</td>
+<td align="left"><a href="#mh-02">MH-02</a> dòng 14, <a href="#cl-03">CL-03</a></td>
+<td align="left">Chờ</td>
+</tr>
+<tr>
+<td align="left"><a id="q-05"></a>Q-05</td>
+<td align="left"><code>serviceCode</code> và icon của mục menu ở <a href="#mh-01">MH-01</a>. Mã dịch vụ ở BO_Dịch vụ (RC-01 P6) có dùng chung mã này không?</td>
+<td align="left">Menu <a href="#mh-01">MH-01</a> hiển thị theo mã dịch vụ OMNI Server trả (<a href="#ref-02">REF-02</a>); URD không ghi</td>
+<td align="left">-</td>
+<td align="left">OMNI Server + BA</td>
+<td align="center">🟠</td>
+<td align="left"><a href="#cl-01">CL-01</a>, <a href="#mh-01">MH-01</a></td>
+<td align="left">Chờ</td>
+</tr>
+<tr>
+<td align="left"><a id="q-06"></a>Q-06</td>
+<td align="left">Endpoint và field của <a href="#api-01">API-01</a>, <a href="#api-02">API-02</a>, <a href="#api-03">API-03</a>; định danh giao dịch (RC-01 P5); mã lỗi riêng (RC-01 P8)</td>
+<td align="left">Chưa có API doc</td>
+<td align="left">-</td>
+<td align="left">OMNI Server</td>
+<td align="center">🟠</td>
+<td align="left"><a href="#api-01">API-01</a>, <a href="#api-02">API-02</a>, <a href="#api-03">API-03</a>, <a href="#cl-02">CL-02</a>, <a href="#cl-07">CL-07</a></td>
+<td align="left">Chờ</td>
+</tr>
+<tr>
+<td align="left"><a id="q-07"></a>Q-07</td>
+<td align="left">Ô Hạn mức mới: độ dài tối đa, loại bàn phím, tự thêm dấu "." khi gõ, paste chuỗi có ký tự lạ, số 0 ở đầu, nhập 0</td>
+<td align="left">URD không nói</td>
+<td align="left">Bàn phím số, tự thêm "." khi gõ, lọc ký tự không phải số khi paste</td>
+<td align="left">BA</td>
+<td align="center">🟠</td>
+<td align="left"><a href="#mh-02">MH-02</a> dòng 7, <a href="#cl-03">CL-03</a></td>
+<td align="left">Chờ</td>
+</tr>
+<tr>
+<td align="left"><a id="q-08"></a>Q-08</td>
+<td align="left">Ô Thời gian chờ mới chỉ nhận số nguyên giờ hay cho số lẻ? Độ dài tối đa?</td>
+<td align="left">URD EX-02, BR_02 ghi "chọn" nhưng ảnh MH2 là ô nhập; không nói định dạng</td>
+<td align="left">Số nguyên, tối đa 2 ký tự</td>
+<td align="left">BA</td>
+<td align="center">🟠</td>
+<td align="left"><a href="#mh-02">MH-02</a> dòng 12, <a href="#br-02">BR-02</a>, <a href="#cl-03">CL-03</a></td>
+<td align="left">Chờ</td>
+</tr>
+<tr>
+<td align="left"><a id="q-09"></a>Q-09</td>
+<td align="left">BR_03 "Chặn show thông báo" nghĩa là gì: disable nút Tiếp tục, hay bấm thì hiện thông báo (câu VN/EN)? Validate lúc nào? <a href="#msg-01">MSG-01</a> … <a href="#msg-04">MSG-04</a> hiện inline dưới ô hay popup? Nút Tiếp tục enable khi nào?</td>
+<td align="left">URD không nói kiểu hiển thị; câu BR_03 không rõ nghĩa</td>
+<td align="left">Nút enable khi đủ 2 ô và đã tick; validate khi bấm Tiếp tục; lỗi inline dưới ô</td>
+<td align="left">BA</td>
+<td align="center">🟠</td>
+<td align="left"><a href="#msg-01">MSG-01</a> … <a href="#msg-04">MSG-04</a>, <a href="#mh-02">MH-02</a> dòng 16, <a href="#cl-04">CL-04</a></td>
+<td align="left">Chờ</td>
+</tr>
+<tr>
+<td align="left"><a id="q-10"></a>Q-10</td>
+<td align="left">Biến thể đã có cài đặt: bắt buộc nhập cả Hạn mức mới và Thời gian chờ mới, hay được để trống một ô để giữ giá trị hiện tại? Giá trị mới trùng giá trị hiện tại có cho gửi không?</td>
+<td align="left">URD LT-01 ghi "sửa giá trị hạn mức/thời gian chờ"</td>
+<td align="left">Bắt buộc cả hai ô</td>
+<td align="left">BA</td>
+<td align="center">🟠</td>
+<td align="left"><a href="#mh-02">MH-02</a> dòng 7, 12, <a href="#cl-03">CL-03</a>, <a href="#cl-04">CL-04</a></td>
+<td align="left">Chờ</td>
+</tr>
+<tr>
+<td align="left"><a id="q-11"></a>Q-11</td>
+<td align="left">Link "Điều khoản điều kiện" mở văn bản nào, bằng webview / PDF / trình duyệt, URL lấy từ đâu?</td>
+<td align="left">URD không nói</td>
+<td align="left">-</td>
+<td align="left">BA</td>
+<td align="center">🟠</td>
+<td align="left"><a href="#mh-02">MH-02</a> dòng 15, <a href="#cl-05">CL-05</a></td>
+<td align="left">Chờ</td>
+</tr>
+<tr>
+<td align="left"><a id="q-12"></a>Q-12</td>
+<td align="left">Icon Back, Back cứng Android, icon Home ở <a href="#mh-02">MH-02</a> đi đâu, có giữ dữ liệu đã nhập không? KH hủy Facepay thì về đâu (RC-01 P4)?</td>
+<td align="left">URD không nói</td>
+<td align="left">Back → <a href="#mh-01">MH-01</a>; Home → Trang chủ; hủy Facepay → ở lại <a href="#mh-02">MH-02</a>, giữ dữ liệu</td>
+<td align="left">BA</td>
+<td align="center">🟠</td>
+<td align="left"><a href="#mh-02">MH-02</a> dòng 1, 3, <a href="#mh-03">MH-03</a>, <a href="#cl-03">CL-03</a>, <a href="#cl-06">CL-06</a></td>
+<td align="left">Chờ</td>
+</tr>
+<tr>
+<td align="left"><a id="q-13"></a>Q-13</td>
+<td align="left">Điều kiện "KH là khách hàng cá nhân": App ẩn mục menu, hay OMNI Server / BO chặn (không trả mã dịch vụ, trả lỗi)?</td>
+<td align="left">URD §1.1 chỉ ghi điều kiện, không nói bên kiểm tra</td>
+<td align="left">OMNI Server không trả mã dịch vụ cho KH không phải cá nhân — App không làm gì</td>
+<td align="left">BA + OMNI Server</td>
+<td align="center">🟠</td>
+<td align="left"><a href="#cl-09">CL-09</a></td>
+<td align="left">Chờ</td>
+</tr>
+<tr>
+<td align="left"><a id="q-14"></a>Q-14</td>
+<td align="left">Dòng lẻ "Kiểm tra trạng thái PTXT" cuối URD §1.4 là gì, bên nào làm, lúc nào?</td>
+<td align="left">Dòng không có nội dung trong bảng lỗi</td>
+<td align="left">Là kiểm tra STH trước Facepay — đã có trong <a href="#ref-01">REF-01</a>, xóa khỏi URD</td>
+<td align="left">BA</td>
+<td align="center">🟠</td>
+<td align="left"><a href="#cl-10">CL-10</a></td>
+<td align="left">Chờ</td>
+</tr>
+<tr>
+<td align="left"><a id="q-15"></a>Q-15</td>
+<td align="left">Xác nhận <a href="#cfg-01">CFG-01</a>, <a href="#cfg-03">CFG-03</a> … <a href="#cfg-06">CFG-06</a> là tham số (không ghi cứng), giá trị và mã tham số, nơi cấu hình</td>
+<td align="left">URD vừa ghi "theo tham số cấu hình" vừa ghi cứng 100tr, 24h, 72h, 400 triệu</td>
+<td align="left">Là tham số ở BO</td>
+<td align="left">BA + OMNI Server</td>
+<td align="center">🟡</td>
+<td align="left"><a href="#cfg-01">CFG-01</a>, <a href="#cfg-03">CFG-03</a> … <a href="#cfg-06">CFG-06</a></td>
+<td align="left">Chờ</td>
+</tr>
+<tr>
+<td align="left"><a id="q-16"></a>Q-16</td>
+<td align="left"><a href="#msg-01">MSG-01</a>: "{…} triệu" trong khi ô nhập là VND — hiển thị số theo định dạng nào? Câu EN thiếu dấu cách ở "between{"</td>
+<td align="left">Câu URD §1.4 không khớp đơn vị ô nhập</td>
+<td align="left">Số đầy đủ có dấu ".", bỏ chữ "triệu"</td>
+<td align="left">BA</td>
+<td align="center">🟡</td>
+<td align="left"><a href="#msg-01">MSG-01</a></td>
+<td align="left">Chờ</td>
+</tr>
+<tr>
+<td align="left"><a id="q-17"></a>Q-17</td>
+<td align="left">Duyệt các câu EN <em>(tự dịch)</em> ở <a href="#mh-01">MH-01</a>, <a href="#mh-02">MH-02</a></td>
+<td align="left">URD chỉ có VN cho nhãn và placeholder</td>
+<td align="left">-</td>
+<td align="left">BA</td>
+<td align="center">🟡</td>
+<td align="left"><a href="#mh-01-spec">§3 MH-01</a>, <a href="#mh-02">MH-02</a></td>
+<td align="left">Chờ</td>
+</tr>
+<tr>
+<td align="left"><a id="q-18"></a>Q-18</td>
+<td align="left">Priority của Use Case</td>
+<td align="left">URD không ghi</td>
+<td align="left">-</td>
+<td align="left">BA</td>
+<td align="center">🟡</td>
+<td align="left"><a href="#s-1">§1</a></td>
+<td align="left">Chờ</td>
+</tr>
+</tbody></table>
+<p><strong>Trạng thái:</strong> <code>Chờ</code> · <code>Đang hỏi</code> · <code>Đã chốt (dd/MM — người chốt — trả lời)</code>.</p>
+<hr>
+<h2 id="8-tài-liệu-tham-chiếu"><a id="s-8"></a>8. Tài liệu tham chiếu</h2>
+<table>
+<thead>
+<tr>
+<th align="left">Tài liệu</th>
+<th align="left">Link</th>
+<th align="left">Phiên bản / ngày lấy</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">URD</td>
+<td align="left"><a href="https://wiki.servicehub.vn/pages/viewpage.action?pageId=1032684541">URD_FE_ Cài đặt hạn mức giao dịch chờ — pageId 1032684541</a> · bản convert <code>../urd/URD_PendingTransactionLimit.md</code></td>
+<td align="left">URD 1.0.0 (21/09/2026) — lấy 24/09/2026</td>
+</tr>
+<tr>
+<td align="left">API doc</td>
+<td align="left">chưa có</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">Figma</td>
+<td align="left">không có — dùng ảnh trong URD</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">SRS dùng chung RC-01 (<a href="#ref-01">REF-01</a>)</td>
+<td align="left"><a href="../../../shared/xac-thuc-giao-dich/SRS_RC01_XacThucGiaoDich.md">SRS_RC01_XacThucGiaoDich.md</a></td>
+<td align="left">V1.0.0 — 24/09/2026</td>
+</tr>
+<tr>
+<td align="left">URD_FE_ Xác thực Facepay (gốc của <a href="#ref-01">REF-01</a>)</td>
+<td align="left"><a href="https://wiki.servicehub.vn/pages/viewpage.action?pageId=707138054">pageId 707138054</a></td>
+<td align="left">15/04/2025</td>
+</tr>
+<tr>
+<td align="left">Xử lý lỗi mặc định (<a href="#ref-03">REF-03</a>)</td>
+<td align="left"><code>.claude/project-profile/srs-profile.md</code> <a href="#s-6">§6</a></td>
+<td align="left">24/09/2026</td>
+</tr>
+<tr>
+<td align="left">URD liên quan (ngoài phạm vi)</td>
+<td align="left">Check điều kiện và thực thi giao dịch chờ — pageId 1034325369</td>
+<td align="left">-</td>
+</tr>
+</tbody></table>
+
+	
+
+</body></html>
